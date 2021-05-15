@@ -1,2 +1,2 @@
-# Ski-Resort
-Project Two
+# Project-Two
+ Ski Resort Application for Project Two

@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="en">
+    <head>
+    <title>Project One(Again)</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Favicon -->
+    <link href="favicon.ico" rel="shortcut icon" />
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    
+    <!-- Custom CSS -->
+    <link href="css/my_style.css" rel="stylesheet" type="text/css" />
+    </head>
+    <body>
+        <nav class="navbar navbar-expand-sm navbar-dark">
+            <a class="navbar-brand text-muted" href="home.html">P1.2 Beta</a>
+            <div class="spacer"></div>
+            <button class="navbar-toggler d-lg-none" type="button" data-toggle="collapse" data-target="#collapsibleNavId" aria-controls="collapsibleNavId"
+                aria-expanded="false" aria-label="Toggle navigation"></button>
+            <div class="collapse navbar-collapse" id="collapsibleNavId">
+                <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+                    <li class="nav-item active">
+                        <a class="nav-link text-muted" href="home.html">Home<span class="sr-only">(current)</span></a>
+                    </li>
+                </ul>
+                <form class="form-inline my-2 my-lg-0">
+                    <div>
+                        <input id="my_search" class="form-control mr-sm-2 text-light" type="text" placeholder="Email - me@revature.net" oninput="load_emp_by_email();">
+                        <div id="load_emails"><div id="email_container"></div></div>
+                    </div>
+                    <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Login</button>
+                </form>
+            </div>
+        </nav>
+        <main onclick="clear_email_list();">
+            <div class="container">
+                <div class="row">
+                    <div class="col-xs-1-12">
+                        <h1 class="text-muted text-center">Tuition Reimbursment Application</h1>
+                        <div class="card-group w-100">
+                            <div class="card w-100">
+                                <div class="card-body w-100">
+                                    <h4 class="card-title">Requirements:</h4>
+                                    <p class="card-text">Need supervisor and Department Head approval!</p>
+                                    <h5 class="card-title">Steps:</h5>
+                                    <p class="card-text">
+                                        <ol>
+                                            <li>Please Login: enter your email in the bar above.</li>
+                                            <li>Submit your application.</li>
+                                            <li>Please attach a .msg(email) approval from your supervisor if you have one.</li>
+                                            <li>Please submit your completion requirements and the date the event starts and the end date.</li>
+                                            <li>Please submit the total cost for the event.</li>
+                                            <li>Make sure to check your email and login regularly so that you may respond to any additional information needed.</li>
+                                            <li>Upon approval you will be notified, make sure to put our email(tra-reply@revature.net) in your contacts list so you that it does not go to the junk folder.</li>
+                                        </ol>
+                                    </p>
+                                </div>
+                            </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                </div>
+            </div>
+        </main>
+        <footer>
+
+        </footer>
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <script src="javascript/custom.js"></script>
+    </body>
+</html>

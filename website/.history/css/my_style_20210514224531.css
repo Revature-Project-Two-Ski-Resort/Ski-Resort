@@ -1,0 +1,126 @@
+html, body {
+    background-color: #cfd1db;
+    height: 100%;
+}
+body {
+  display: flex;
+  flex-direction: column;
+}
+main {
+    margin-bottom: 2rem;
+}
+.content {
+    flex: 1 0 auto;
+}
+nav {
+    background-color:#535A92;
+}
+.bookbar {
+    background-color:#2D1557;
+    clear:both;
+    margin-bottom: 20px;
+    padding: 10px;
+}
+.bookbar button{
+    display: inline-block;
+    clear:none;
+}
+.bookbar form{
+    clear:none;
+    float: right;
+    position: relative;
+}
+footer {
+    background-color: #032536;
+    padding: 10px;
+    display: block;
+    width: 100%;
+    flex-shrink: 0;
+}
+.banner {
+    margin: 0px;
+    margin-top: -20px;
+    margin-bottom: 20px;
+    overflow: hidden;
+    height: 350px;
+    width: 100%;
+}
+.green {
+    background-color:#477186;
+}
+.altsvgcolor {
+    width: 10rem;
+    filter: invert(33%) sepia(19%) saturate(1882%) hue-rotate(350deg) brightness(91%) contrast(91%);
+}
+.green a:hover{
+    background-color:#113C51;
+}
+section {
+    background-color:#b9bdd1;
+    min-height: 100%;
+}
+.navbar .navbar-nav > .nav-item > a,
+.navbar > a {
+    font-weight: bold;
+    font-size: 1.6rem;
+    padding: 5px 10px;
+}
+.navbar .navbar-nav > .nav-item > a:hover,
+.navbar .navbar-nav > .nav-item > a:focus,
+.navbar > a:hover,
+.navbar > a:focus{
+    background-color: #7D83B0 !important;
+    color: #000331 !important;
+}
+#corner_title {
+    float: right;
+    clear:right;
+}
+#corner_title::before {
+    display: inline-block;
+    max-width: 75%;
+}
+.loader {
+    border: 0.4rem solid #c4c4ff;
+    border-radius: 50%;
+    border-top: 0.4rem solid blue;
+    border-bottom: 0.4rem solid #c4c4ff;
+    width: 20px;
+    height: 20px;
+    -webkit-animation: spin 0.5s linear infinite;
+    animation: spin 0.5s linear infinite;
+    margin: auto;
+    margin-top: 15px;
+    margin-bottom: 15px;
+  }
+  
+  @-webkit-keyframes spin {
+    0% { -webkit-transform: rotate(0deg); }
+    100% { -webkit-transform: rotate(360deg); }
+  }
+  
+  @keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+  }
+  .mouseme {
+      cursor:pointer;
+      background-color:#2a3657;
+  }
+  .card-group hr {
+      display: inline-block;
+      width: 100%;
+      height: 5px;
+      background-color:#01223a;
+      margin: auto;
+      margin-top: 15px;
+      margin-bottom: 15px;
+  }
+@media (min-width: 576px) {
+    .spacer {
+        height: 3rem;
+        width: 1px;
+        background-color:#000000;
+        margin-right: 20px;
+    }
+}

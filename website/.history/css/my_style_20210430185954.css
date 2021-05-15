@@ -1,0 +1,6 @@
+body {
+    background-color: #1f3036;
+}
+.hover_darken.hover {
+    background-color: rgba(#0044ff, #000980, #0000ff, 0.2);
+}

@@ -1,0 +1,106 @@
+html, body {
+    background-color: #1f3036;
+    height: 100%;
+}
+nav, footer {
+    background-color: #01223a;
+    margin-bottom: 20px;
+}
+footer {
+    padding-top: 10px;
+    padding-bottom: 10px;
+    display: block;
+    width: 100%;
+    margin: 0px;
+    margin-top: 1rem;
+    position:relative;
+}
+main {
+    margin-bottom: 30px;
+}
+.navbar .navbar-nav > .nav-item > a,
+.navbar > a {
+    font-weight: bold;
+    font-size: 1.6rem;
+    padding: 5px 10px;
+}
+.navbar .navbar-nav > .nav-item > a:hover,
+.navbar .navbar-nav > .nav-item > a:focus,
+.navbar > a:hover,
+.navbar > a:focus{
+    background-color: #053353 !important;
+    color: #000331 !important;
+}
+#load_emails,
+#load_emails2 {
+    display:none;
+}
+#load_emails > div,
+#load_emails2 > div {
+    display: block;
+    min-width: 12.7rem;
+    max-width: 14rem;
+    overflow-x: hidden;
+    text-overflow: ellipsis;
+    position:absolute;
+    z-index: 1;
+    border-width:0px 1px 1px;
+    border-style:solid;
+    border-color:#000000;
+    border-radius:0px 0px 5px 5px;
+    background-color:#2a3657;
+}
+#load_emails div a:last-child,
+#load_emails2 div a:last-child{
+    border-bottom-left-radius:5px;
+    border-bottom-right-radius:5px;
+}
+#load_emails a,
+#load_emails2 a {
+    display: block;
+    padding: 2px;
+}
+#load_emails a:hover,
+#load_emails2 a:hover {
+    background-color:rgba(194, 227, 250, 0.3);
+}
+#corner_title {
+    float: right;
+    clear:right;
+    display: inline-block;
+}
+#corner_title::before {
+    display: inline-block;
+    max-width: 75%;
+}
+.loader {
+    border: 0.4rem solid #c4c4ff;
+    border-radius: 50%;
+    border-top: 0.4rem solid blue;
+    border-bottom: 0.4rem solid #c4c4ff;
+    width: 20px;
+    height: 20px;
+    -webkit-animation: spin 0.5s linear infinite;
+    animation: spin 0.5s linear infinite;
+    margin: auto;
+    margin-top: 15px;
+    margin-bottom: 15px;
+  }
+  
+  @-webkit-keyframes spin {
+    0% { -webkit-transform: rotate(0deg); }
+    100% { -webkit-transform: rotate(360deg); }
+  }
+  
+  @keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+  }
+@media (min-width: 576px) {
+    .spacer {
+        height: 3rem;
+        width: 1px;
+        background-color:#000000;
+        margin-right: 20px;
+    }
+}

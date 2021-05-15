@@ -1,0 +1,20 @@
+body {
+    background-color: #1f3036;
+}
+nav {
+    background-color: #01223a;
+}
+.navbar .navbar-nav > .nav-item > a,
+.navbar > a {
+    font-weight: bold;
+    font-size: 1.6rem;
+    border-right: #053353 1px solid;
+    padding: 5px 10px;
+}
+.navbar .navbar-nav > .nav-item > a:hover,
+.navbar .navbar-nav > .nav-item > a:focus,
+.navbar > a:hover,
+.navbar > a:focus{
+    background-color: #053353 !important;
+    color: #000331 !important;
+}

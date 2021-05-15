@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+        <title>Frosty Mountain - Hotel Services</title>
+        <style>
+            .clickable {
+                color: white;
+                background-color: #333333;
+                margin-top: 5px;
+                
+            }
+        </style>
+    </head>
+
+    <body>
+        <div id="navbar" style="height: 200px; background-color: darkslateblue;">
+            <h1 id="placeholder" style="color: white">Navigation Bar</h1>
+        </div>
+        <div id="selectBar" style="float: left; background-color: black; width: 400px; height: 100vh;">
+            <h1 style="color: white;">Our Hotel Services</h1><br>
+            <h2 class="clickable" id="rentals" onclick="setTextBar(0)">Ski Rentals</h2><br>
+            <h2 class="clickable" id="daycare" onclick="setTextBar(1)">In-House Daycare</h2><br>
+            <h2 class="clickable" id="spa" onclick="setTextBar(2)">Full-Service Spa and Sauna</h2><br>
+        </div>
+        <div id="textBar" style="float: left; background-color: grey; width: 600px; height: 100vh;">
+            <h1 id="textHead" style="color: white;"></h1><br>
+            <h3 id="textDesc" style="color: white;"></h3>
+        </div>
+    </body>
+
+    <script>
+        function setTextBar(textId) {
+            switch(textId) {
+                case 0:
+                    document.getElementById("textHead").innerHTML = "Ski and Snowbard Rentals";
+                    document.getElementById("textDesc").innerHTML = "";
+                    break;
+                case 1: 
+                    document.getElementById("textHead").innerHTML = "In-House Daycare";
+                    document.getElementById("textDesc").innerHTML = "";
+                    break;
+                case 2: 
+                    document.getElementById("textHead").innerHTML = "Full-Service Spa";
+                    document.getElementById("textDesc").innerHTML = "";
+                    break;
+                default: 
+                    document.getElementById("textHead").innerHTML = "";
+                    document.getElementById("textDesc").innerHTML = "";
+            }
+        }
+    </script>
+</html>

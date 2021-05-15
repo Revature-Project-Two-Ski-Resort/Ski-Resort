@@ -1,0 +1,186 @@
+<!doctype html>
+<html lang="en">
+    <head>
+    <title>Submit Application</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Favicon -->
+    <link href="favicon.ico" rel="shortcut icon" />
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    
+    <!-- Custom CSS -->
+    <link href="css/my_style.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.jsdelivr.net/npm/pdf-lib/dist/pdf-lib.min.js"></script>
+    </head>
+    <body onclick="clear_email_list('email_container', 'load_emails');" onload="print_date('corner_title');pre_load_my_info('loadme');">
+        <nav class="navbar navbar-expand-sm navbar-dark">
+            <a class="navbar-brand text-muted" href="home.html">P1.2 Beta</a>
+            <div class="spacer"></div>
+            <button class="navbar-toggler d-lg-none" type="button" data-toggle="collapse" data-target="#collapsibleNavId" aria-controls="collapsibleNavId"
+                aria-expanded="false" aria-label="Toggle navigation"></button>
+            <div class="collapse navbar-collapse" id="collapsibleNavId">
+                <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+                    <li class="nav-item active">
+                        <a class="nav-link text-muted" href="home.html">Home<span class="sr-only">(current)</span></a>
+                    </li>
+                </ul>
+                <form class="form-inline my-2 my-lg-0" autocomplete="off">
+                    <div>
+                        <input id="my_search" class="form-control mr-sm-2" type="text" placeholder="To Login Enter Email" oninput="load_emp_by_email('email_container', 'my_search', 'load_emails', 'account.html?user=');">
+                        <div id="load_emails" class="text-light"><div id="email_container"></div></div>
+                    </div>
+                </form>
+            </div>
+        </nav>
+        <main>
+            <div class="container">
+                <div class="row">
+                    <div class="col-xs-12">
+                        <h1 class="text-muted text-center">Tuition Reimbursment Application<span id="loadme"></span></h1>
+                        <div class="card-group w-100">
+                            <div class="card w-100">
+                                <div class="card-body w-100">
+                                    <div id="corner_title"></div>
+                                    <h4 class="card-title">Tuition Reimbursment Application</h4>
+                                    <p class="card-text">Please fill in all required information</p>
+                                    <p class="card-text">* means required</p>
+                                    <p class="card-text">
+                                        <form class="form-inline my-2 my-lg-0 app_submit" id="my_new_app">
+                                            <ol class="row">
+                                                <li style="display: none;">
+                                                    <label for="emp_id" class="card-title">Employee Id #:</label>
+                                                    <input id="emp_id" hidden="hidden" required="required" name="emp_id" class="form-control mr-sm-2" type="text" placeholder="Employee ID*">
+                                                </li>
+                                                <li class="col-xs-4">
+                                                    <label for="firstname" class="card-title">First Name:</label>
+                                                    <input id="firstname" required="required" oninput="validate_my_form(this);" name="firstname" class="form-control mr-sm-2" type="text" placeholder="First Name*">
+                                                </li>
+                                                <li class="col-xs-4">
+                                                    <label for="middlename" class="card-title">Middle Name:</label>
+                                                    <input id="middlename" form="my_new_app" name="middlename" oninput="validate_my_form(this);" class="form-control mr-sm-2" type="text" placeholder="Middle Name*">
+                                                </li>
+                                                <li class="col-xs-4">
+                                                    <label for="lastname" class="card-title">Last Name:</label>
+                                                    <input id="lastname" required="required" oninput="validate_my_form(this);" name="lastname" class="form-control mr-sm-2" type="text" placeholder="Last Name*">
+                                                </li>
+                                                <li class="col-xs-4">
+                                                    <label for="address" class="card-title">Address:</label>
+                                                    <input id="address" required="required" name="address" oninput="validate_my_form(this);" class="form-control mr-sm-2" maxlength="25" type="text" placeholder="Address*">
+                                                </li>
+                                                <li class="col-xs-4">
+                                                    <label for="address_second" class="card-title">Address Second Line:</label>
+                                                    <input id="address_second" name="address_second" oninput="validate_my_form(this);" class="form-control mr-sm-2" maxlength="25" type="text" placeholder="Address Line 2">
+                                                </li>
+                                                <li class="col-xs-4">
+                                                    <label for="city" class="card-title">City:</label>
+                                                    <input id="city" name="city" required="required" oninput="validate_my_form(this);" class="form-control mr-sm-2" type="text" maxlength="25" placeholder="City*">
+                                                </li>
+                                                <li class="col-xs-4">
+                                                    <label for="state" class="card-title">State:</label>
+                                                    <input id="state" name="state" required="required" oninput="validate_my_form(this);" class="form-control mr-sm-2" type="text" maxlength="25" placeholder="State*">
+                                                </li>
+                                                <li class="col-xs-4">
+                                                    <label for="zip" class="card-title">Zip:</label>
+                                                    <input id="zip" name="zip" required="required" oninput="validate_my_form(this);" class="form-control mr-sm-2" type="number" max="99999" placeholder="Zip*">
+                                                </li>
+                                                <li class="col-xl-12">
+                                                    <label for="description" class="card-title"></label><br />
+                                                    <textarea class="form-control mr-sm-2" required="required" oninput="validate_my_form(this);" id="description" name="description" maxlength="200" cols=100 rows=10 placeholder="Description*"></textarea>
+                                                </li>
+                                                <li class="col-xs-4">
+                                                    <label for="work_just" class="card-title"></label><br />
+                                                    <textarea id="work_just" name="work_just" required="required" oninput="validate_my_form(this);" class="form-control mr-sm-2" type="text" maxlength="200" cols=100 rows=10 placeholder="Work Justification*"></textarea>
+                                                </li>
+                                                <li class="col-xs-4">
+                                                    <label for="price_tag" class="card-title">Total Cost:</label>
+                                                    <input id="price_tag" name="price_tag" required="required" oninput="validate_my_form(this); calculate_refundable_amt('sub_message');" class="form-control mr-sm-2" type="number" max=100000 placeholder="Total Cost*">
+                                                </li>
+                                                <li class="col-xs-4">
+                                                    <label for="event_types" class="card-title">Event Type*:</label>
+                                                    <select id="event_types" required="required" oninput="validate_my_form(this); calculate_refundable_amt('sub_message');" name="event_types" class="form-control mr-sm-2" type="text" title="Event Type*">
+                                                        <option value="courses" selected="selected">Courses</option>
+                                                        <option value="seminars">Seminars</option>
+                                                        <option value="certification preparation classes">certification preparation classes</option>
+                                                        <option value="certification">Certification</option>
+                                                        <option value="technical training">Technical Training</option>
+                                                        <option value="other">Other</option>
+                                                    </select>
+                                                </li>
+                                                <li class="col-xs-4">
+                                                    <label for="grade_format" class="card-title">Grade Format*:</label>
+                                                    <select id="grade_format" name="grade_format" oninput="validate_my_form(this);" required="required" class="form-control mr-sm-2">
+                                                        <option value="grade" selected="selected">Grade</option>
+                                                        <option value="presentation" selected="selected">Presentation</option>
+                                                    </select>
+                                                </li>
+                                                <li class="col-xs-4">
+                                                    <label for="date_event" class="card-title">Event Date*:</label>
+                                                    <input id="date_event" name="date_event" required="required" oninput="validate_my_form(this);" class="form-control mr-sm-2" type="date" placeholder="Event Date">
+                                                </li>
+                                                <li class="col-xs-4">
+                                                    <div class="custom-file" style="clear: both;display: block;position: relative;float: none;">
+                                                        <label for="sup_approval_attach" class="card-title mouseme custom-file-label text-light">Approval:</label>
+                                                        <input type="file" accept=".msg" oninput="validate_my_form(this);" class="form-control-file custom-file-input mouseme" id="sup_approval_attach" name="sup_approval_attach" placeholder="Supervisor Approval" aria-describedby="sup_approval_attach">
+                                                    </div>
+                                                </li>
+                                                <li class="col-xs-4 mouseme">
+                                                    <div class="custom-file mouseme" style="clear: both;display: block;position: relative;float: none;">
+                                                        <label for="sup_approval_attach" class="card-title mouseme custom-file-label text-light">Attachments:</label>
+                                                        <input type="file" oninput="validate_my_form(this);" accept=".jpeg,.png,.pdf,.txt,.doc,.msg" class="form-control-file custom-file-input mouseme" id="additional_attach" name="additional_attach" placeholder="Supervisor Approval" aria-describedby="sup_approval_attach">
+                                                    </div>
+                                                </li>
+                                            </ol>
+                                            <button type="submit" name="sub_app" id="sub_app" disabled="disabled" class="btn btn-outline-success">Submit application
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-plus-circle" viewBox="0 0 16 16">
+                                                    <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"/>
+                                                    <path d="M8 4a.5.5 0 0 1 .5.5v3h3a.5.5 0 0 1 0 1h-3v3a.5.5 0 0 1-1 0v-3h-3a.5.5 0 0 1 0-1h3v-3A.5.5 0 0 1 8 4z"/>
+                                                </svg>
+                                            </button>
+                                            <div style="margin: 10px;">
+                                                <h5>Projected reimbursement value(max is of $1000.00 for the year):</h5>
+                                                <span id="sub_message"></span>
+                                            </div>
+                                        </form>
+                                    </p>
+                                </div>
+                            </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                </div>
+            </div>
+            <!--<iframe id="pdf" style="width: 100%; height: 100%;"></iframe>-->
+        </main>
+        <footer class="text-light">
+            <div class="container">
+                <div class="row">
+                    <div class="col-xs-1-12">
+                        <h5>Site Links</h5>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-xs-1-12">
+                        <a href="home.html">Home</a>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-xs-1-12">
+                        <p>&#169; LLC, Tuition Reimbursment</p>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <script type="module"></script>
+    <script src="javascript/custom.js"></script>
+    </body>
+</html>

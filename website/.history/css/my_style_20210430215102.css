@@ -1,0 +1,39 @@
+body {
+    background-color: #1f3036;
+}
+nav {
+    background-color: #01223a;
+    margin-bottom: 20px;
+}
+.navbar .navbar-nav > .nav-item > a,
+.navbar > a {
+    font-weight: bold;
+    font-size: 1.6rem;
+    padding: 5px 10px;
+}
+.navbar .navbar-nav > .nav-item > a:hover,
+.navbar .navbar-nav > .nav-item > a:focus,
+.navbar > a:hover,
+.navbar > a:focus{
+    background-color: #053353 !important;
+    color: #000331 !important;
+}
+#load_emails {
+    display:inline;
+}
+#load_emails a {
+    display: block;
+    background-color:#093380;
+    z-index: 145;
+}
+#load_emails a:hover {
+    background-color:#c2e3fa;
+}
+@media (min-width: 576px) {
+    .spacer {
+        height: 3rem;
+        width: 1px;
+        background-color:#000000;
+        margin-right: 20px;
+    }
+}

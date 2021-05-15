@@ -1,0 +1,115 @@
+<!doctype html>
+<html lang="en">
+    <head>
+    <title>Submit Application</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Favicon -->
+    <link href="favicon.ico" rel="shortcut icon" />
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    
+    <!-- Custom CSS -->
+    <link href="css/my_style.css" rel="stylesheet" type="text/css" />
+    </head>
+    <body onclick="clear_email_list('email_container', 'load_emails');" onload="print_date('corner_title');pre_load_my_info('loadme');">
+        <nav class="navbar navbar-expand-sm navbar-dark">
+            <a class="navbar-brand text-muted" href="home.html">P1.2 Beta</a>
+            <div class="spacer"></div>
+            <button class="navbar-toggler d-lg-none" type="button" data-toggle="collapse" data-target="#collapsibleNavId" aria-controls="collapsibleNavId"
+                aria-expanded="false" aria-label="Toggle navigation"></button>
+            <div class="collapse navbar-collapse" id="collapsibleNavId">
+                <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+                    <li class="nav-item active">
+                        <a class="nav-link text-muted" href="home.html">Home<span class="sr-only">(current)</span></a>
+                    </li>
+                </ul>
+                <form class="form-inline my-2 my-lg-0" autocomplete="off">
+                    <div>
+                        <input id="my_search" class="form-control mr-sm-2" type="text" placeholder="To Login Enter Email" oninput="load_emp_by_email('email_container', 'my_search', 'load_emails');">
+                        <div id="load_emails" class="text-light"><div id="email_container"></div></div>
+                    </div>
+                </form>
+            </div>
+        </nav>
+        <main>
+            <div class="container">
+                <div class="row">
+                    <div class="col-xs-12">
+                        <h1 class="text-muted text-center">Tuition Reimbursment Application<span id="loadme"></span></h1>
+                        <div class="card-group w-100">
+                            <div class="card w-100">
+                                <div class="card-body w-100">
+                                    <div id="corner_title"></div>
+                                    <h4 class="card-title">Tuition Reimbursment Application</h4>
+                                    <p class="card-text">Please fill in all required information</p>
+                                    <p class="card-text">* means required</p>
+                                    <p class="card-text">
+                                        <form class="form-inline my-2 my-lg-0 app_submit">
+                                            <ol class="row">
+                                                <li style="display: none;">
+                                                    <label for="emp_id" class="card-title">Employee Id #:</label>
+                                                    <input id="emp_id" hidden="hidden" readonly="readonly" name="emp_id" class="form-control mr-sm-2" type="text" placeholder="Employee ID*">
+                                                </li>
+                                                <li class="col-xs-4">
+                                                    <label for="firstname" class="card-title">First Name:</label>
+                                                    <input id="firstname" name="firstname" class="form-control mr-sm-2" type="text" placeholder="First Name*">
+                                                </li>
+                                                <li class="col-xs-4">
+                                                    <label for="middlename" class="card-title">First Name:</label>
+                                                    <input id="middlename" name="middlename" class="form-control mr-sm-2" type="text" placeholder="Middle Name*">
+                                                </li>
+                                                <li>
+                                                    <label for="lastname" class="card-title">First Name:</label>
+                                                    <input id="lastname" name="lastname" class="form-control mr-sm-2" type="text" placeholder="Last Name*">
+                                                </li>
+                                                <li>
+                                                    <label for="address" class="card-title">First Name:</label>
+                                                    <input id="address" name="address" class="form-control mr-sm-2" type="text" placeholder="Address*">
+                                                </li>
+                                                <li>
+                                                    <label for="address_second" class="card-title">First Name:</label>
+                                                    <input id="address_second" name="address_second" class="form-control mr-sm-2" type="text" placeholder="Address Line 2">
+                                                </li>
+                                            </ol>
+                                        </form>
+                                    </p>
+                                </div>
+                            </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                </div>
+            </div>
+        </main>
+        <footer class="text-light">
+            <div class="container">
+                <div class="row">
+                    <div class="col-xs-1-12">
+                        <h5>Site Links</h5>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-xs-1-12">
+                        <a href="home.html">Home</a>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-xs-1-12">
+                        <p>&#169; LLC, Tuition Reimbursment</p>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <script src="javascript/custom.js"></script>
+    </body>
+</html>

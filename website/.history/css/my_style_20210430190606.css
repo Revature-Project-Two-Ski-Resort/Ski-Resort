@@ -1,0 +1,6 @@
+body {
+    background-color: #1f3036;
+}
+.nav-link:hover {
+    background-color: rgba(#000000, #000000, #000000, 0.9) !important;
+}

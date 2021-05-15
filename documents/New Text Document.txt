@@ -1,0 +1,43 @@
+lodging obj example
+
+lodgebooking = new object();
+lodgebooking.rooms = new object();
+lodgebooking.rooms.room1 = new object();
+//lodgebooking.rooms.room2 = new object();
+goupId = new object();
+goupId.ind1 = new object();
+goupId.ind2 = new object();
+goupId.ind3 = new object();
+goupId.ind4 = new object();
+//goupId.ind1.room2 = lodgebooking.rooms.room2
+//goupId.ind2.room2 = lodgebooking.rooms.room2
+
+//goupId.ind3.room1 = lodgebooking.rooms.room1
+//goupId.ind4.room1 = lodgebooking.rooms.room1
+
+goupId.room = lodgebooking.rooms.room1;
+
+goupId.room = goupId.ind1
+goupId.room = goupId.ind2
+
+group {ind1:#7435,
+	ind2:#3434,
+	ind3:#3434,
+	ind2:#3434,
+	
+	room:#4543{
+	ind2:#324}}
+
+group {ind1:#7435{room:,
+		equipment:,
+		lodging:
+		etc:},
+	ind2:#3434,
+	ind3:#3434,
+	ind2:#3434}{
+	room:{
+	roomID:#345534,
+	beds:3,
+	king:1,
+	twin:2
+}}

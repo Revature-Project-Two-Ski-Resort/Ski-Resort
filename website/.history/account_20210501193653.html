@@ -1,0 +1,112 @@
+<!doctype html>
+<html lang="en">
+    <head>
+    <title>Your Profile</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Favicon -->
+    <link href="favicon.ico" rel="shortcut icon" />
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    
+    <!-- Custom CSS -->
+    <link href="css/my_style.css" rel="stylesheet" type="text/css" />
+    </head>
+    <body onload="pre_load_my_profile('user_name');">
+        <nav class="navbar navbar-expand-sm navbar-dark">
+            <a class="navbar-brand text-muted" href="home.html">P1.2 Beta</a>
+            <div class="spacer"></div>
+            <button class="navbar-toggler d-lg-none" type="button" data-toggle="collapse" data-target="#collapsibleNavId" aria-controls="collapsibleNavId"
+                aria-expanded="false" aria-label="Toggle navigation"></button>
+            <div class="collapse navbar-collapse" id="collapsibleNavId">
+                <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+                    <li class="nav-item active">
+                        <a class="nav-link text-muted" href="home.html">Home<span class="sr-only">(current)</span></a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+        <main>
+            <div class="container">
+                <div class="row">
+                    <div class="col-xs-5">
+                        <h1 class="text-muted text-center">Welcome <span id="user_name">Lamar</span> to your profile!</h1>
+                        <div class="card-group w-100">
+                            <div class="card w-100">
+                                <div class="card-body w-100">
+                                    <h4 class="card-title">Tasks to complete:</h4>
+                                    <h5 class="card-title">Please complete the below tasks starting from the most urgent!</h5>
+                                    <p class="card-text">This is ordered by the most urgent being at the top</p>
+                                    <p class="card-text">Approvals to complete:</p>
+                                    <p class="card-text">
+                                        <ol id="complete_approvals">
+                                            <!--loaded content goes here-->
+                                        </ol>
+                                    </p>
+                                </div>
+                            </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xs-3">
+                        <div class="card-group w-100">
+                            <div class="card w-100">
+                                <h4 class="card-title">Applications you submitted:</h4>
+                                <div class="card-body w-100">
+                                    <h5 class="card-title">Applications Awaiting Approval</h5>
+                                    <p class="card-text">Cost:</p>
+                                    <p class="card-text">
+                                        <ol id="">
+                                            <!--loaded content goes here-->
+                                        </ol>
+                                    </p>
+                                </div>
+                                <div class="card-body w-100">
+                                    <h5 class="card-title">Approved Applications</h5>
+                                    <p class="card-text">Cost:</p>
+                                    <p class="card-text">
+                                        <ol id="">
+                                            <!--loaded content goes here-->
+                                        </ol>
+                                    </p>
+                                </div>
+                                <p class="card-text">Total Cost:</p>
+                                <p class="card-text">Total Reimbursed Cost:-</p>
+                            </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+        <footer class="text-light">
+            <div class="container">
+                <div class="row">
+                    <div class="col-xs-1-12">
+                        <h5>Site Links</h5>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-xs-1-12">
+                        <a href="home.html">Home</a>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-xs-1-12">
+                        <p>&#169; LLC, Tuition Reimbursment</p>
+                    </div>
+                    
+                </div>
+            </div>
+        </footer>
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <script src="javascript/custom.js"></script>
+    </body>
+</html>

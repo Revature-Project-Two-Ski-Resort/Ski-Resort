@@ -1,0 +1,1 @@
+let Activities = new Object();

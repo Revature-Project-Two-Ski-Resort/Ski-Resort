@@ -1,0 +1,12 @@
+body {
+    background-color: #1f3036;
+}
+.navbar .navbar-nav > .nav-item > a {
+    font-weight: bold;
+    font-size: 1.6rem;
+}
+.navbar .navbar-nav > .nav-item > a:hover,
+.navbar .navbar-nav > .nav-item > a:focus{
+    background-color: #053353 !important;
+    color: #000331 !important;
+}

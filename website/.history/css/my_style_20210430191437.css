@@ -1,0 +1,12 @@
+body {
+    background-color: #1f3036;
+}
+.navbar .navbar-nav > .active > a:hover {
+    background-color: rgba(#000000, #000000, #000000, 0.9) !important;
+}
+.navbar .navbar-nav > .active > a,
+
+.navbar .navbar-nav > .active > a:focus {
+  color: #ffffff;
+  background-color: #080808;
+}
