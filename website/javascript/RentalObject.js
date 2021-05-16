@@ -1,20 +1,22 @@
 let rental = new Object();
+    rental.id = 0;
+    
     // Each rental is made to one person ('s id)
-    rental.person = Number;
+    rental.person = 0;
 
     // A rental can consist of multiple people's items, so make a count
     rental.items = new Object();
-        rental.items.skis_count = Number;
-        rental.items.helmets_count = Number;
-        rental.items.snowboards_count = Number;
-        rental.items.boots_count = Number;
+        rental.items.skis_count = 0;
+        rental.items.helmets_count = 0;
+        rental.items.snowboards_count = 0;
+        rental.items.boots_count = 0;
 
     // These will be constant for all rental objects
     rental.prices = new Object();
-        rental.prices.skis = Number;
-        rental.prices.helmet = Number;
-        rental.prices.snowboard = Number;
-        rental.prices.boots = Number;
+        rental.prices.skis = 0;
+        rental.prices.helmet = 0;
+        rental.prices.snowboard = 0;
+        rental.prices.boots = 0;
 
     // Date/time of rental beginning and end; end defaults to end of current business day
     rental.start = new Date();

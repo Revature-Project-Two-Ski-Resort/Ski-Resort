@@ -1,10 +1,12 @@
 let daycare = new Object();
+    daycare.id = 0;
+
     // Daycare booking is made on a group basis (linked to a group id)
-    daycare.groupId = Number;
+    daycare.groupId = 0;
 
     // Up to two adults in the group will be assigned as the guardian (linked to a person id)
-    daycare.guardianId = Number;
-    daycare.guardianId2 = Number;
+    daycare.guardianId = 0;
+    daycare.guardianId2 = 0;
 
     // List of child ids who will be attending
     daycare.children = [];
@@ -14,9 +16,9 @@ let daycare = new Object();
 
     // Fixed prices; age ranges: Baby = 0-1, Toddler = 2-4, Child = 5-8
     daycare.prices = new Object();
-        daycare.prices.baby = Number;
-        daycare.prices.toddler = Number;
-        daycare.prices.child = Number;
+        daycare.prices.baby = 0;
+        daycare.prices.toddler = 0;
+        daycare.prices.child = 0;
 
     // Date/time of rental beginning and end; end defaults to end of current business day
     daycare.start = new Date();

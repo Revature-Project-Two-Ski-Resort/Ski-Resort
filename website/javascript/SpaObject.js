@@ -1,6 +1,8 @@
 let spa = new Object();
+    spa.id = 0;
+    
     // Spa treatment booked on a by-person basis
-    spa.personId = Number;
+    spa.personId = 0;
 
     // Array with prices for services
     spa.prices = [];
