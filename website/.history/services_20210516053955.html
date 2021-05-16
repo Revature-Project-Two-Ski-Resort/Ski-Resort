@@ -1,0 +1,261 @@
+<!doctype html>
+<html lang="en">
+    <head>
+    <title>Frosty Mountain Services</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Favicon -->
+    <link href="favicon.ico" rel="shortcut icon" />
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    
+    <!-- Custom CSS -->
+    <link href="css/my_style.css" rel="stylesheet" type="text/css" />
+    </head>
+    <body>
+        <div class="content">
+            <nav class="navbar fixed-top navbar-expand-sm navbar-dark text-light">
+                <a class="navbar-brand logo" href="home.html"><img class="img-fluid mx-auto d-block altsvgcolor"  src="images/Frosty-mountain-Logo-no-words.svg" alt="Frosty Mountain" />Frosty Mountain</a>
+                <div class="spacer"></div>
+                <button class="navbar-toggler d-lg-none" type="button" data-toggle="collapse" data-target="#collapsibleNavId" aria-controls="collapsibleNavId"
+                    aria-expanded="false" aria-label="Toggle navigation"></button>
+                <div class="collapse navbar-collapse" id="collapsibleNavId">
+                    <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+                        <li class="nav-item">
+                            <a class="nav-link" href="home.html">Home</a>
+                        </li>
+                        <li class="nav-item dropdown open">
+                            <a class="nav-link dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" href="home.html">Lodging</a>
+                            <div class="dropdown-menu green" aria-labelledby="triggerId">
+                                <a class="dropdown-item text-light" href="lodging.html#mtn-view">Mountain View</a>
+                                <a class="dropdown-item text-light" href="lodging.html#standard-view">Non-Mountain View</a>
+                            </div>
+                        </li>
+                        <li class="nav-item dropdown open active">
+                            <a class="nav-link dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" href="ski_services.html">Services</a>
+                            <div class="dropdown-menu green" aria-labelledby="triggerId">
+                                <a class="dropdown-item text-light" href="#">Spa</a>
+                                <a class="dropdown-item text-light" href="#">Rentals</a>
+                                <a class="dropdown-item text-light" href="#">Daycare</a>
+                            </div>
+                        </li>
+                        <li class="nav-item dropdown open">
+                            <a class="nav-link dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" href="activities.html">Activities</a>
+                            <div class="dropdown-menu green" aria-labelledby="triggerId">
+                                <a class="dropdown-item text-light" href="#">In-Season</a>
+                                <a class="dropdown-item text-light" href="#">Off-Season</a>
+                            </div>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="home.html">Contact</a>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+            <main>
+                <div class="bookbar">
+                    <button onclick="startbook('lodge-book.html');" class="btn btn-primary">Book A Trip Now</button>
+                    <form class="form-inline my-0" autocomplete="off">
+                        <div>
+                            <input class="form-control mr-sm-2" type="text" placeholder="Search">
+                        </div>
+                    </form>
+                </div>
+                <div class="tab-content">
+                    <div id="rental-banner" class="banner tab-pane fade show active">
+                        <img src="images/ski-equip.jpg" class="img-fluid mx-auto d-block" style="margin-top: -22rem; width: 100%;" alt="Frosty Mountain Skiing">
+                    </div>
+                    <div id="spa-banner" class="banner tab-pane fade">
+                        <img src="images/spa-banner.jpg" class="img-fluid mx-auto d-block" style="margin-top: -22rem; width: 100%;" alt="Frosty Mountain Skiing">
+                    </div>
+                    <div id="daycare-banner" class="banner tab-pane fade">
+                        <img src="images/daycare-banner2.jpg" class="img-fluid mx-auto d-block" style="margin-top: -22rem; width: 100%;" alt="Frosty Mountain Skiing">
+                    </div>
+                </div>
+                <section>
+                    <div class="row mx-0">
+                        <div class="col-2 py-3 px-0">
+                            <div class="list-group list-group-flush" id="list-tab" role="tablist">
+                                <a onclick="setInfoBar(0);" class="list-group-item list-group-item-action active" aria-current="true" type="button" id="list-profile-list" data-toggle="list" data-target="#rental-content" role="tab" aria-controls="#rental-content">Rentals</a>
+                                <a onclick="setInfoBar(1);" class="list-group-item list-group-item-action" type="button" id="list-home-list" data-toggle="list" data-target="#spa-content" role="tab" aria-controls="#spa-content">Spa</a>
+                                <a onclick="setInfoBar(2);" class="list-group-item list-group-item-action" type="button" id="list-messages-list" data-toggle="list" data-target="#daycare-content" role="tab" aria-controls="#daycare-content">Daycare</a>
+                            </div>
+                        </div>
+                        <div class="col-9">
+                            <div class="container">
+                                <div class="row">
+                                    <div class="col-12 py-3 px-4">
+                                        <div class="tab-content" id="nav-tabContent">
+                                            <div class="tab-pane fade show active rental-content" id="rental-content" role="tabpanel" aria-labelledby="rental-content">
+                                                <h1 class="text-center"><strong>Ski and Snowboard Rentals</strong></h1>
+                                                <p class="text-muted blockquote text-center">Rent what you need, forget what you don't</p>
+                                                <div class="form-group row m-3">
+                                                    <div class="col-sm-7">
+                                                        <label class="col-sm-12 col-form-label" for="ski-size"><h3>Skis</h3></label>
+                                                        <div class="col-sm-12">
+                                                            <div class="input-group">
+                                                                <select class="custom-select" id="ski-size" name="standard-bed" aria-label="Choose a standard suite">
+                                                                    <option selected="selected">Choose a size</option>
+                                                                    <option>Small</option>
+                                                                    <option>Medium</option>
+                                                                    <option>Large</option>
+                                                                    <option>X-Large</option>
+                                                                </select>
+                                                                <div class="input-group-append">
+                                                                    <button class="btn btn-primary" onclick="startbook('lodge-book.html');" type="button">Start Booking</button>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-sm-5">
+                                                        <img src="images/snowboard.jpg" class="img-fluid mx-auto d-block" alt="Skiis" />
+                                                    </div>
+                                                </div>
+                                                <hr />
+                                                <div class="form-group row m-3">
+                                                    <div class="col-sm-7">
+                                                        <label class="col-sm-12 col-form-label" for="ski-size"><h3>Snowboards</h3></label>
+                                                        <div class="col-sm-12">
+                                                            <div class="input-group">
+                                                                <select class="custom-select" id="ski-size" name="standard-bed" aria-label="Choose a standard suite">
+                                                                    <option selected="selected">Choose a size</option>
+                                                                    <option>Small</option>
+                                                                    <option>Medium</option>
+                                                                    <option>Large</option>
+                                                                    <option>X-Large</option>
+                                                                </select>
+                                                                <div class="input-group-append">
+                                                                    <button class="btn btn-primary" onclick="startbook('lodge-book.html');" type="button">Start Booking</button>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-sm-5">
+                                                        <img src="images/snowboard.jpg" class="img-fluid mx-auto d-block" alt="Snowboards" />
+                                                    </div>
+                                                </div>
+                                                <hr />
+                                                <div class="form-group row m-3">
+                                                    <div class="col-sm-7">
+                                                        <label class="col-sm-12 col-form-label" for="ski-size"><h3>Goggles</h3></label>
+                                                        <div class="col-sm-12">
+                                                            <div class="input-group">
+                                                                <select class="custom-select" id="ski-size" name="standard-bed" aria-label="Choose a style">
+                                                                    <option selected="selected">Choose a style</option>
+                                                                    <option>blue</option>
+                                                                    <option>black</option>
+                                                                    <option>yellow</option>
+                                                                    <option>X-Large</option>
+                                                                </select>
+                                                                <div class="input-group-append">
+                                                                    <button class="btn btn-primary" onclick="startbook('lodge-book.html');" type="button">Start Booking</button>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-sm-5">
+                                                        <img src="images/snow-goggles.jpg" class="img-fluid mx-auto d-block" alt="Snowboards" />
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="tab-pane fade spa-content" id="spa-content" role="tabpanel" aria-labelledby="spa-content">
+                                                <h1><strong>Full-Service Spa and Sauna</strong></h1>
+                                            </div>
+                                            <div class="tab-pane fade daycare-content multi-list" id="daycare-content" role="tabpanel" aria-labelledby="daycare-content">
+                                                <h1><strong>In-House Daycare</strong></h1>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </main>
+        </div>
+        <footer class="text-light">
+            <div class="container">
+                <div class="row">
+                    <div class="col-4">
+                        <h5>Home Page</h5>
+                        <ul class="list-unstyled">
+                            <li>
+                                <a href="home.html">Frosty Mountain</a>
+                            </li>
+                            <li>
+                                <a href="lodge-book.html">Book Now</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="col-2">
+                        <h5>Lodging</h5>
+                        <ul class="list-unstyled">
+                            <li>
+                                <a href="lodging.html#mtn-view">Mountain View</a>
+                            </li>
+                            <li>
+                                <a href="lodging.html#standard-view">Non-Mountain View</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="col-2">
+                        <h5>Services</h5>
+                        <ul class="list-unstyled">
+                            <li>
+                                <a href="services.html">Spa</a>
+                            </li>
+                            <li>
+                                <a href="services.html">Rentals</a>
+                            </li>
+                            <li>
+                                <a href="services.html">Daycare</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="col-2">
+                        <h5>Activities</h5>
+                        <ul class="list-unstyled">
+                            <li>
+                                <a href="activities.html">On-Season</a>
+                            </li>
+                            <li>
+                                <a href="off-season.html">Off-Season</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-xs-1-12">
+                        <p>&#169; LLC, Frosty Mountain</p>
+                    </div>
+                    
+                </div>
+            </div>
+        </footer>
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <script src="javascript/custom.js"></script>
+    <script>
+        function setInfoBar(textId) {
+            switch(textId) {
+                case 0:
+                    document.getElementById("rental-banner").fadeOut('show')
+                    break;
+                case 1: 
+                    document.getElementById("spa-banner").fadeOut('show')
+                    break;
+                case 2: 
+                    document.getElementById("daycare-banner").fadeOut('show')
+                    break;
+                default: 
+            }
+        }
+    </script>
+    </body>
+</html>
