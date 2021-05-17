@@ -1,8 +1,11 @@
 Ski Resort
-Project Description
+
+Project Description:
+
 The Ski Resort Application allows users to view offered services, make or cancel a booking, or view available supplies and booking dates. The Application takes advantage of the built in form calendar to showcase what dates can be booked. A user can dynamically add party members to their trip or choose to go solo. They can apply different services to either the group or individuals in the group. Every service and product has been priced, available with discounts when purchased in bulk. A total estimated price is shown at the end of each step in the booking process and a final price at the end of purchase before the user’s final confirmation.
 
-Technologies Used
+Technologies Used:
+
 Python       version 3.9
 Java         version 8.0
 JavaScript   version ES6.0(ECMAScript 2018)
@@ -37,18 +40,30 @@ A fully functioning and navigatable website - Users can look through to pre-view
 
 To-do list:
 
-Wow improvement to be done 1
-Wow improvement to be done 2
+Allow employees to view and catalog inventory
+Allow employees to add new catalog items and events based on dates
 Getting Started
-(include git clone command) (include all environment setup steps)
 
-Be sure to include BOTH Windows and Unix command
-Be sure to mention if the commands only work on a specific platform (eg. AWS, GCP)
+Using pycharm:
+create local virtual environment(venv) in your project
+
+pip install flask
+pip install flask_cors
+pip install behave
+pip install selenium
+pip install psycopg2
+install the cucumber plugin for pycharm
+
+All Platform compatable
 
 All the code required to get started
-Images of what it should look like
+
+Load the home.html in your local browser
+
+It is located in (project name)/website/home.html
 Usage
-Here, you instruct other people on how to use your project after they’ve installed it. This would also be a good place to include screenshots of your project in action.
+Click through the pages of the website until you decide you would like to make a booking. Web pages are designed to be intuitive so to get to the booking process you can click on any of the links that refer to "book now".
+You can click back at any point in the booking process and any data you previously filled in will auto-refill.
 
 Contributors
 dwaynej730
