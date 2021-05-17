@@ -6,6 +6,8 @@ The Ski Resort Application allows users to view offered services, make or cancel
 
 Technologies Used:
 
+Features List of features ready and TODOs for future development
+
 Python       version 3.9
 Java         version 8.0
 JavaScript   version ES6.0(ECMAScript 2018)
@@ -61,7 +63,8 @@ All the code required to get started
 Load the home.html in your local browser
 
 It is located in (project name)/website/home.html
-Usage
+Usage:
+
 Click through the pages of the website until you decide you would like to make a booking. Web pages are designed to be intuitive so to get to the booking process you can click on any of the links that refer to "book now".
 You can click back at any point in the booking process and any data you previously filled in will auto-refill.
 
@@ -72,8 +75,5 @@ jbrezen
 lamarhinchen
 
 License
-<<<<<<< Updated upstream
+
 This project uses the following license: GPL-3.0 License.
-=======
-This project uses the following license: GPL-3.0 License.
->>>>>>> Stashed changes
