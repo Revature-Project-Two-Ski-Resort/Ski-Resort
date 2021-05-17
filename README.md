@@ -54,7 +54,7 @@ pip install selenium
 pip install psycopg2
 install the cucumber plugin for pycharm
 
-All Platform compatable
+All Platform compatible
 
 All the code required to get started
 
@@ -72,4 +72,8 @@ jbrezen
 lamarhinchen
 
 License
+<<<<<<< Updated upstream
 This project uses the following license: GPL-3.0 License.
+=======
+This project uses the following license: GPL-3.0 License.
+>>>>>>> Stashed changes
