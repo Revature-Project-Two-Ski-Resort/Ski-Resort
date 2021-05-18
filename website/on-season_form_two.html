@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Frosty Mountain Activities - On Season fomr </title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Favicon -->
+    <link href="favicon.ico" rel="shortcut icon" />
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    
+    <!-- Custom CSS -->
+    <link href="css.my_style.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+    <div class="content">
+        <nav class="navbar fixed-top navbar-expand-sm navbar-dark text-light">
+            <a class="navbar-brand logo" href="home.html"><img class="img-fluid mx-auto d-block altsvgcolor"  src="images/Frosty-mountain-Logo-no-words.svg" alt="Frosty Mountain" />Frosty Mountain</a>
+            <div class="spacer"></div>
+            <button class="navbar-toggler d-lg-none" type="button" data-toggle="collapse" data-target="#collapsibleNavId" aria-controls="collapsibleNavId"
+                aria-expanded="false" aria-label="Toggle navigation"></button>
+            <div class="collapse navbar-collapse" id="collapsibleNavId">
+                <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link" href="home.html">Home</a>
+                    </li>
+                    <li class="nav-item dropdown open">
+                        <a class="nav-link dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" href="home.html">Lodging</a>
+                        <div class="dropdown-menu green" aria-labelledby="triggerId">
+                            <a class="dropdown-item text-light" href="lodging.html#mtn-view">Mountain View</a>
+                            <a class="dropdown-item text-light" href="lodging.html#standard-view">Non-Mountain View</a>
+                        </div>
+                    </li>
+                    <li class="nav-item dropdown open">
+                        <a class="nav-link dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" href="ski_services.html">Services</a>
+                        <div class="dropdown-menu green" aria-labelledby="triggerId">
+                            <a class="dropdown-item text-light" href="services.html">Spa</a>
+                            <a class="dropdown-item text-light" href="services.html">Rentals</a>
+                            <a class="dropdown-item text-light" href="services.html">Daycare</a>
+                        </div>
+                    </li>
+                    <li class="nav-item dropdown open">
+                        <a class="nav-link dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" href="activities.html">Activities</a>
+                        <div class="dropdown-menu green" aria-labelledby="triggerId">
+                            <a class="dropdown-item text-light" href="activities.html">In-Season</a>
+                            <a class="dropdown-item text-light" href="off-season.html">Off-Season</a>
+                        </div>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="home.html">Contact</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+        <div class="bookbar">
+            <div class="bread-crumb-container" aria-label="breadcrumb">
+                <ol id="breadcrumb">
+                    <li><a aria-label="Home" href="home.html">Home</a></li>
+                    <li class="breadcrumb-item" aria-current="Lodging"><a class="active">Lodging</a></li>
+                </ol>
+            </div>
+            <form class="form-inline my-0" autocomplete="off">
+                <div>
+                    <input class="form-control mr-sm-2" type="text" placeholder="Search">
+                 </div>
+            </form>
+        </div>
+        
+        <div>
+            <label>How experienced are you with the following activities?</label><br><br>
+            <label for="lvl">Snowboarding: </label>
+            <select name="lvl" id="lvl">
+                <option value="beginner" id="beginner">Beginner</option>
+                <option value="intermediate" id="intermediate">Intermediate</option>
+                <option value="expert" id="expert">Expert</option>
+            </select><br><br>
+
+            <label for="skii_lvl">Snowboarding: </label>
+            <select name="skii_lvl" id="skii_lvl">
+                <option value="beginner" id="skii_beginner">Beginner</option>
+                <option value="intermediate" id="skii_intermediate">Intermediate</option>
+                <option value="expert" id="skii_expert">Expert</option>
+            </select><br><br>
+            <button type="button" id="rent">Rent Equipment</button>
+            <button type="button" id="next">Next</button>
+        </div>
+
+
+</body>
+</html>
