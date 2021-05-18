@@ -60,7 +60,6 @@
                     <div class="bread-crumb-container" aria-label="breadcrumb">
                         <ol id="breadcrumb">
                             <li><a aria-label="Home" href="home.html">Home</a></li>
-                            <li><a aria-label="Lodging" href="start-book.html">Personal Information</a></li>
                             <li class="breadcrumb-item" aria-current="Lodging"><a class="active">Lodging</a></li>
                         </ol>
                     </div>
@@ -95,15 +94,38 @@
                                                 <label for="inputPassword4">*Last Name</label>
                                                 <input type="text" class="form-control" id="inputPassword4">
                                             </div>
+                                            <div class="form-group col-md-4">
+                                                <label for="inputPassword4">*Address</label>
+                                                <input type="text" class="form-control" id="inputPassword4">
+                                            </div>
+                                            <div class="form-group col-md-4">
+                                                <label for="inputPassword4">*Number of Adults</label>
+                                                <input type="text" class="form-control" id="inputPassword4">
+                                            </div>
+                                            <div class="form-group col-md-4">
+                                                <label for="inputPassword4">Number of Children</label>
+                                                <input type="text" class="form-control" id="inputPassword4">
+                                            </div>
+                                            <div class="form-group col-md-4">
+                                                <label for="inputPassword4">Skill Level</label>
+                                                <input type="text" class="form-control" id="inputPassword4">
+                                            </div>
+                                            <div class="form-group col-md-4">
+                                                <label for="inputPassword4">Birthdate</label>
+                                                <input type="text" class="form-control" id="inputPassword4">
+                                            </div>
+                                            <!-- Need Date Pickers Here for start and end dates! -->    
                                         </div>
                                         <div class="form-group">
                                             <label for="inputAddress">Rooms</label>
                                             <select class="custom-select" id="mtn-bed" name="mtn-bed" aria-label="Choose a mountain view suite">
                                                 <option selected="selected">Choose a suite</option>
-                                                <option>Single Twin</option>
-                                                <option>Double Queen</option>
+                                                <option>King Suite</option>
                                                 <option>Single King</option>
-                                                <option>Single Queen/twin</option>
+                                                <option>Double Queen</option>
+                                                <option>Mountain View King Suite</option>
+                                                <option>Mountain View Single King</option>
+                                                <option>Mountain View Double Queen</option>
                                             </select>
                                         </div>
                                         <p>Price: <span id="lodge-price">$0.00</span></p>
@@ -138,7 +160,7 @@
                                 <a href="home.html">Frosty Mountain</a>
                             </li>
                             <li>
-                                <a href="start-book.html">Book Now</a>
+                                <a href="lodge-book.html">Book Now</a>
                             </li>
                         </ul>
                     </div>
