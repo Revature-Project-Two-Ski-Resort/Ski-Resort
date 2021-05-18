@@ -144,7 +144,7 @@ let activities = new Object();
 //Main user object
 let group_book = new Object();
     group_book.id = 0;
-    group_book.pin = "0000";
+    group_book.pin = 0000;
     group_book.activities = new Object();
         group_book.activities.camping = new Object();
             group_book.activities.camping.sites = new Object();
@@ -163,7 +163,6 @@ let group_book = new Object();
             group_book.users.primaryuser.firstname = "steve";
             group_book.users.primaryuser.middlename = "sam";
             group_book.users.primaryuser.lastname = "john";
-            group_book.users.primaryuser.price = 20.00;
             group_book.users.primaryuser.activities = new Object();
             group_book.users.primaryuser.activities.greentree = new Object();
                 group_book.users.primaryuser.activities.greentree.id = 0;
@@ -341,7 +340,7 @@ function setDateRange(DateStart, DateEnd, DateElement) {
                 } else {
                     //all elements are valid
                     console.log("form is valid let's move forward!");
-                    startbook(nextpage);
+                    startbook('lodge-book.html');
                 }
                 event.preventDefault();
                 form.classList.add('was-validated');

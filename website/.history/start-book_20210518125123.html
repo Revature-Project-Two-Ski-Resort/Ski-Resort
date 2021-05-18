@@ -79,7 +79,7 @@
                                 <article>
                                     <h1><strong>Personal Information</strong></h1>
                                     <p class="text-muted blockquote">Please fill in your Personal Information and how many are part of your group</p>
-                                    <form id="myform" class="needs-validation" novalidate onchange="if(group_book.totalprice() && document.getElementById('lodge-price')){document.getElementById('lodge-price').innerHTML = formatter.format(group_book.totalprice());}nextpage='lodge-book.html';">
+                                    <form id="myform" class="needs-validation" novalidate>
                                     <fieldset>
                                         <legend>* Means Required</legend>
                                         <div class="form-row">
@@ -98,7 +98,7 @@
                                         </div>
                                         <div class="form-row">
                                             <label for="primaryemail">*Email</label>
-                                            <input type="email" pattern="^([_\-\.0-9a-zA-Z]+)@([_\-\.0-9a-zA-Z]+)\.([a-zA-Z]){2,100}$" class="form-control" id="primaryemail" required>
+                                            <input type="email" pattern="/^([_\-\.0-9a-zA-Z]+)@([_\-\.0-9a-zA-Z]+)\.([a-zA-Z]){2,7}$/" class="form-control" id="primaryemail" required>
                                             <div class="invalid-feedback">
                                                 Please type a valid Email.
                                             </div>

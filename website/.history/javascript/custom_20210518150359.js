@@ -341,7 +341,7 @@ function setDateRange(DateStart, DateEnd, DateElement) {
                 } else {
                     //all elements are valid
                     console.log("form is valid let's move forward!");
-                    startbook(nextpage);
+                    startbook('lodge-book.html');
                 }
                 event.preventDefault();
                 form.classList.add('was-validated');
