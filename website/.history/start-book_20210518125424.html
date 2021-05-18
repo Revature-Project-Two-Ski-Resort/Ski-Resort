@@ -79,7 +79,7 @@
                                 <article>
                                     <h1><strong>Personal Information</strong></h1>
                                     <p class="text-muted blockquote">Please fill in your Personal Information and how many are part of your group</p>
-                                    <form id="myform" class="needs-validation" novalidate onchange="if(group_book.totalprice() && document.getElementById('lodge-price')){document.getElementById('lodge-price').innerHTML = formatter.format(group_book.totalprice());}nextpage='lodge-book.html';">
+                                    <form id="myform" class="needs-validation" novalidate>
                                     <fieldset>
                                         <legend>* Means Required</legend>
                                         <div class="form-row">
@@ -98,7 +98,7 @@
                                         </div>
                                         <div class="form-row">
                                             <label for="primaryemail">*Email</label>
-                                            <input type="email" pattern="^([_\-\.0-9a-zA-Z]+)@([_\-\.0-9a-zA-Z]+)\.([a-zA-Z]){2,100}$" class="form-control" id="primaryemail" required>
+                                            <input type="email" pattern="/^([_\-\.0-9a-zA-Z]+)@([_\-\.0-9a-zA-Z]+)\.([a-zA-Z]){2,7}$/" class="form-control" id="primaryemail" required>
                                             <div class="invalid-feedback">
                                                 Please type a valid Email.
                                             </div>
@@ -121,7 +121,7 @@
                                             </svg>
                                              Add a group member
                                         </button>
-                                        <button type="submit" class="btn btn-primary">Next Step 
+                                        <button type="submit" onload="console.log('lodge-book.html');" class="btn btn-primary">Next Step 
                                             <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-right-circle" viewBox="0 0 16 16">
                                                 <path fill-rule="evenodd" d="M1 8a7 7 0 1 0 14 0A7 7 0 0 0 1 8zm15 0A8 8 0 1 1 0 8a8 8 0 0 1 16 0zM4.5 7.5a.5.5 0 0 0 0 1h5.793l-2.147 2.146a.5.5 0 0 0 .708.708l3-3a.5.5 0 0 0 0-.708l-3-3a.5.5 0 1 0-.708.708L10.293 7.5H4.5z"/>
                                             </svg>
