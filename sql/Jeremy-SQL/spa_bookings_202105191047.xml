@@ -1,0 +1,9 @@
+<?xml version="1.0" ?>
+<!DOCTYPE spa_bookings [
+  <!ELEMENT spa_bookings (DATA_RECORD*)>
+  <!ELEMENT DATA_RECORD (spa_id?,person_id?)+>
+  <!ELEMENT spa_id (#PCDATA)>
+  <!ELEMENT person_id (#PCDATA)>
+]>
+<spa_bookings>
+</spa_bookings>
