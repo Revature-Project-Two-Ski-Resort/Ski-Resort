@@ -83,21 +83,65 @@
                                     <p class="text-muted blockquote">Please fill in the following form to book your equipment</p>
                                     <fieldset>
                                         <legend>* Means Required</legend>
-                                        <div class="form-row">
-                                            <div class="form-group col-md-4">
-                                                <label for="inputEmail4">*First Name</label>
-                                                <input type="text" class="form-control" id="inputEmail4">
-                                            </div>
-                                            <div class="form-group col-md-4">
-                                                <label for="inputPassword4">M. Initial</label>
-                                                <input type="text" class="form-control" id="inputPassword4">
-                                            </div>
-                                            <div class="form-group col-md-4">
-                                                <label for="inputPassword4">*Last Name</label>
-                                                <input type="text" class="form-control" id="inputPassword4">
+                                          <div class="form-row">
+                                            <div class="form-group col-md-3">
+                                                <label for="numRentals">*Number of Skii Rentals</label>
+                                                <input type="number" min=0 max=150 step="1" placeholder="# of rentals" class="form-control" id="numRentals" name="numRentals" aria-label="Please enter your age" required />
+                                                </div>
+                                                        <div class="form-group col-md-3">
+                                                            <label for="numRentals">*Number of Snowboards</label>
+                                                            <input type="number" min=0 max=150 step="1" placeholder="# of rentals" class="form-control" id="numRentals" name="numRentals" aria-label="Please enter your age" required />
+                                                            </div>
+                                                        </div>
+                                                    <div class="container">
+                                                        <div class="btn-group" data-toggle="buttons">
+                                                            <label class="btn btn-primary active"> Spa Day Package
+                                                                <input type="checkbox" name="" id="" checked autocomplete="off">
+                                                            </label>
+                                                            <label class="btn btn-primary"> Spa Message Package
+                                                                <input type="checkbox" name="" id="" autocomplete="off">
+                                                            </label>
+                                                            <label class="btn btn-primary">Spa Couples Package
+                                                                <input type="checkbox" name="" id="" autocomplete="off">
+                                                            </label>
+                                                            <label class="btn btn-primary">Spa Warmup Package
+                                                                <input type="checkbox" name="" id="" autocomplete="off">
+                                                            </label>
+                                                    </div>
+                                                    <div class="form-row">
+                                                    <div class="form-group col-md-3">
+                                                        <label for="numRentals"># of Spa Day Packages</label>
+                                                        <input type="number" min=0 max=150 step="1" placeholder="# of Packages" class="form-control" id="numpackages" name="numRentals" aria-label="Please enter your age" required />
+                                                        </div>
+                                                        <div class="form-group col-md-3">
+                                                            <label for="numRentals"># of Message Packages</label>
+                                                            <input type="number" min=0 max=150 step="1" placeholder="# of Packages" class="form-control" id="numpackages" name="numRentals" aria-label="Please enter your age" required />
+                                                            </div>
+                                                            <div class="form-group col-md-3">
+                                                                <label for="numRentals"># of Couples Packages</label>
+                                                                <input type="number" min=0 max=150 step="1" placeholder="# of Packages" class="form-control" id="numpackages" name="numRentals" aria-label="Please enter your age" required />
+                                                                </div>
+                                                                <div class="form-group col-md-3">
+                                                                    <label for="numRentals"># of Warm-up Packages</label>
+                                                                    <input type="number" min=0 max=150 step="1" placeholder="# of Packages" class="form-control" id="numpackages" name="numRentals" aria-label="Please enter your age" required />
+                                                                    </div>
+                                                </div>
+                                                        <div class="container">
+                                                            <div class="btn-group" data-toggle="buttons">
+                                                                <label class="btn btn-primary active"> Daycare Baby
+                                                                    <input type="checkbox" name="" id="" checked autocomplete="off">
+                                                                </label>
+                                                                <label class="btn btn-primary"> Daycare Toddler
+                                                                    <input type="checkbox" name="" id="" autocomplete="off">
+                                                                </label>
+                                                                <label class="btn btn-primary">Daycare Child
+                                                                    <input type="checkbox" name="" id="" autocomplete="off">
+                                                                </label> 
+                                                        </div>
+                                                     
                                             </div>
                                         </div>
-                                        <div class="form-group">
+                                        <!-- <div class="form-group">
                                             <label for="inputAddress">Ski Equipment</label>
                                             <select class="custom-select" id="mtn-bed" name="mtn-bed" aria-label="Choose a mountain view suite">
                                                 <option selected="selected">Choose Equipment</option>
@@ -106,7 +150,7 @@
                                                 <option>Goggles</option>
                                                 <option>Helmets</option>
                                             </select>
-                                        </div>
+                                        </div> -->
                                         <p>Price: <span id="lodge-price">$0.00</span></p>
                                     </fieldset>
                                     <div class="form-group col-md-6">
