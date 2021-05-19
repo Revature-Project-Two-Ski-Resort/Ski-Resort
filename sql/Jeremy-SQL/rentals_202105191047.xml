@@ -1,0 +1,15 @@
+<?xml version="1.0" ?>
+<!DOCTYPE rentals [
+  <!ELEMENT rentals (DATA_RECORD*)>
+  <!ELEMENT DATA_RECORD (rental_id?,person_id?,skis_count?,helmets_count?,boots_count?,snowboards_count?,start_date?,end_date?)+>
+  <!ELEMENT rental_id (#PCDATA)>
+  <!ELEMENT person_id (#PCDATA)>
+  <!ELEMENT skis_count (#PCDATA)>
+  <!ELEMENT helmets_count (#PCDATA)>
+  <!ELEMENT boots_count (#PCDATA)>
+  <!ELEMENT snowboards_count (#PCDATA)>
+  <!ELEMENT start_date (#PCDATA)>
+  <!ELEMENT end_date (#PCDATA)>
+]>
+<rentals>
+</rentals>
