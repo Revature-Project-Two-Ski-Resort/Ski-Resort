@@ -231,7 +231,7 @@ function groupIDSubmit() {
     let load_loc = response_loc;
     //optional:json data to send to the server
     //can be left blank if not needed
-    let jsonData = group_book;
+    let jsonData = activities;
 
     ajaxCaller(request_type, url, response_func, response_loc, load_loc, jsonData)
 }

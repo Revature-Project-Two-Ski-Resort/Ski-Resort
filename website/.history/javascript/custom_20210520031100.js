@@ -231,7 +231,7 @@ function groupIDSubmit() {
     let load_loc = response_loc;
     //optional:json data to send to the server
     //can be left blank if not needed
-    let jsonData = group_book;
+    let jsonData = activities;
 
     ajaxCaller(request_type, url, response_func, response_loc, load_loc, jsonData)
 }
@@ -274,83 +274,6 @@ function getAllRooms() {
 }
 //caller function: calls an ajax request
 function getAllRooms_complete(status, response, response_loc, load_loc) {
-    //do some logic with the ajax data that was returned
-    //do if you are expecting a json object - JSON.parse(response)
-
-    if(status == 200) {
-        console.log("the response status was: " + status);
-        //load the response into the response_loc
-        document.getElementById(response_loc).innerHTML = response;
-    } else if(status == 400) {
-        console.log("oops there was an issue with status code: " + status);
-        //load the response into the response_loc
-        document.getElementById(response_loc).innerHTML = response;
-    }
-}
-//This function will be called to get all of the available Services
-//This inludes rental equipment, spa services, and daycare service
-function getAllService() {
-    //set the caller_complete to the function that is supposed to receive the response
-    let response_func = getAllService_complete;
-    //endpoint: rest api endpoint
-    let endpoint = "/services"
-    //set the url by adding base_url + endpoint
-    let url = base_url + endpoint;
-    //request_type: type of request
-    let request_type = "GET";
-    //location you want the response to load
-    let response_loc = "test_load";
-    //optional:location you want the load animation to be generated while awaiting the response
-    //can be set for any location but will most often be set to response_loc
-    //can be left blank if not needed
-    let load_loc = response_loc;
-    //optional:json data to send to the server
-    //can be left blank if not needed
-    let jsonData = activities;
-
-    ajaxCaller(request_type, url, response_func, response_loc, load_loc, jsonData)
-}
-//caller function: calls an ajax request
-function getAllService_complete(status, response, response_loc, load_loc) {
-    //do some logic with the ajax data that was returned
-    //do if you are expecting a json object - JSON.parse(response)
-
-    if(status == 200) {
-        console.log("the response status was: " + status);
-        //load the response into the response_loc
-        document.getElementById(response_loc).innerHTML = response;
-    } else if(status == 400) {
-        console.log("oops there was an issue with status code: " + status);
-        //load the response into the response_loc
-        document.getElementById(response_loc).innerHTML = response;
-    }
-}
-//This function will be called to get all of the available Activities
-//This includes both on and off Season Activities
-//Ski/Snowboard slopes, SnowTubing slopes, Walkable/Bikable Trails, Camping Sites
-function getAllActivites() {
-    //set the caller_complete to the function that is supposed to receive the response
-    let response_func = getAllActivites_complete;
-    //endpoint: rest api endpoint
-    let endpoint = "/activities"
-    //set the url by adding base_url + endpoint
-    let url = base_url + endpoint;
-    //request_type: type of request
-    let request_type = "GET";
-    //location you want the response to load
-    let response_loc = "test_load";
-    //optional:location you want the load animation to be generated while awaiting the response
-    //can be set for any location but will most often be set to response_loc
-    //can be left blank if not needed
-    let load_loc = response_loc;
-    //optional:json data to send to the server
-    //can be left blank if not needed
-    let jsonData = activities;
-
-    ajaxCaller(request_type, url, response_func, response_loc, load_loc, jsonData)
-}
-//caller function: calls an ajax request
-function getAllActivites_complete(status, response, response_loc, load_loc) {
     //do some logic with the ajax data that was returned
     //do if you are expecting a json object - JSON.parse(response)
 

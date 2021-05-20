@@ -231,7 +231,7 @@ function groupIDSubmit() {
     let load_loc = response_loc;
     //optional:json data to send to the server
     //can be left blank if not needed
-    let jsonData = group_book;
+    let jsonData = activities;
 
     ajaxCaller(request_type, url, response_func, response_loc, load_loc, jsonData)
 }
@@ -327,7 +327,6 @@ function getAllService_complete(status, response, response_loc, load_loc) {
 }
 //This function will be called to get all of the available Activities
 //This includes both on and off Season Activities
-//Ski/Snowboard slopes, SnowTubing slopes, Walkable/Bikable Trails, Camping Sites
 function getAllActivites() {
     //set the caller_complete to the function that is supposed to receive the response
     let response_func = getAllActivites_complete;
