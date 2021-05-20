@@ -1,0 +1,13 @@
+<?xml version="1.0" ?>
+<!DOCTYPE daycare_bookings [
+  <!ELEMENT daycare_bookings (DATA_RECORD*)>
+  <!ELEMENT DATA_RECORD (daycare_id?,group_id?,guardian_id?,guardian2_id?,start_timestamp?,end_timestamp?)+>
+  <!ELEMENT daycare_id (#PCDATA)>
+  <!ELEMENT group_id (#PCDATA)>
+  <!ELEMENT guardian_id (#PCDATA)>
+  <!ELEMENT guardian2_id (#PCDATA)>
+  <!ELEMENT start_timestamp (#PCDATA)>
+  <!ELEMENT end_timestamp (#PCDATA)>
+]>
+<daycare_bookings>
+</daycare_bookings>

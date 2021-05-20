@@ -77,34 +77,26 @@
                             </div>
                             <div class="col-7 py-3 px-4">
                                 <article>
-                                    <h1><strong>Services</strong></h1>
+                                    <h1><strong>Activities</strong></h1>
                                     <p class="text-muted blockquote">Please fill in the following form to book your equipment</p>
                                     <fieldset>
                                         <legend>* Means Required</legend>
-                                        <div class="form-row">
-                                            <div class="form-group col-md-4">
-                                                <label for="inputEmail4">*First Name</label>
-                                                <input type="text" class="form-control" id="inputEmail4">
+                                        <div class="container">
+                                            <h6>Snow Season Activity access</h6>
+                                            <div class="form-row">
+                                            <h5>Lift Tickets</h5> <label for="numRentals"></label>
+                                                <input type="number" min=0 max=150 step="1" placeholder="# of tickets" class="form-control" id="numRooms" name="numRooms" aria-label="Please enter number of Rooms" required />
+                                                </div>
                                             </div>
-                                            <div class="form-group col-md-4">
-                                                <label for="inputPassword4">M. Initial</label>
-                                                <input type="text" class="form-control" id="inputPassword4">
-                                            </div>
-                                            <div class="form-group col-md-4">
-                                                <label for="inputPassword4">*Last Name</label>
-                                                <input type="text" class="form-control" id="inputPassword4">
-                                            </div>
+                                            <h6>Off Season access</h6><hr>
+                                            <div class="form-row">
+                                             <h5>Trail access</h5> <label for="numRentals"></label>
+                                                 <input type="number" min=0 max=150 step="1" placeholder="# of Trail users" class="form-control" id="numRooms" name="numRooms" aria-label="Please enter number of Rooms" required />
+                                                 </div>
+                                             </div> 
                                         </div>
-                                        <div class="form-group">
-                                            <label for="inputAddress">Ski Equipment</label>
-                                            <select class="custom-select" id="mtn-bed" name="mtn-bed" aria-label="Choose a mountain view suite">
-                                                <option selected="selected">Choose Equipment</option>
-                                                <option>Skis</option>
-                                                <option>Snowboard</option>
-                                                <option>Goggles</option>
-                                                <option>Helmets</option>
-                                            </select>
-                                        </div>
+                                      
+                                         
                                         <p>Price: <span id="lodge-price">$0.00</span></p>
                                     </fieldset>
                                     <div class="form-group col-md-6">
