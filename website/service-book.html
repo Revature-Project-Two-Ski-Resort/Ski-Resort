@@ -15,7 +15,13 @@
     <!-- Custom CSS -->
     <link href="css/my_style.css" rel="stylesheet" type="text/css" />
     </head>
-    <body>
+    <body onload="
+        document.getElementById('rental1').value = sessionStorage.getItem('rental1');
+        document.getElementById('rental2').value = sessionStorage.getItem('rental2');
+        document.getElementById('num_kids').value = sessionStorage.getItem('num_kids');
+        document.getElementById('service_price').innerHTML = formatter.format(group_book.totalprice());
+        nextpage='activity-book.html';
+    ">
         <div class="content">
             <nav class="navbar fixed-top navbar-expand-sm navbar-dark text-light">
                 <a class="navbar-brand logo" href="home.html"><img class="img-fluid mx-auto d-block altsvgcolor"  src="images/Frosty-mountain-Logo-no-words.svg" alt="Frosty Mountain" />Frosty Mountain</a>
@@ -78,7 +84,21 @@
                                 <article>
                                     <h1><strong>Services</strong></h1>
                                     <p class="text-muted blockquote">Please fill in the following form to book your equipment</p>
-                                    <form id="myform" class="needs-validation" novalidate onchange="if(group_book.totalprice() && document.getElementById('service-price')){document.getElementById('service-price').innerHTML = formatter.format(group_book.totalprice());}nextpage='activity-book.html';">
+                                    <form id="myform" class="needs-validation" novalidate onchange="
+                                        if(group_book.totalprice() && document.getElementById('service_price')){
+                                            document.getElementById('service_price').innerHTML = formatter.format(group_book.totalprice());
+                                        }
+                                        nextpage='activity-book.html';
+
+                                        rental1 = document.getElementById('rental1');
+                                        if(rental1.value) { setStorage('rental1', rental1.value); }
+
+                                        rental2 = document.getElementById('rental2');
+                                        if(rental2.value) { setStorage('rental2', rental2.value); }
+
+                                        num_kids = document.getElementById('num_kids');
+                                        if(num_kids.value) { setStorage('num_kids', num_kids.value); }
+                                    ">
                                         <fieldset>
                                             <legend>* Means Required</legend>
                                                 <div class="card my-3">
@@ -108,7 +128,7 @@
                                                         <div class="form-row p-3">
                                                             <div class="form-group col-3">
                                                                 <div class="form-check">
-                                                                    <input class="form-check-input form-element" type="checkbox" id="camp-name" name="camp-name" aria-label="Please enter the camps you would like access to" required />
+                                                                    <input class="form-check-input form-element" type="checkbox" id="name1" name="name1" aria-label="Please enter the camps you would like access to" required />
                                                                     <label class="form-check-label" for="camp-name">
                                                                         west trail
                                                                     </label>
@@ -121,7 +141,7 @@
                                                         <div class="form-row p-3">
                                                             <div class="form-group col-3">
                                                                 <div class="form-check">
-                                                                    <input class="form-check-input form-element" type="checkbox" id="camp-name" name="camp-name" aria-label="Please enter the camps you would like access to" required />
+                                                                    <input class="form-check-input form-element" type="checkbox" id="name2" name="name2" aria-label="Please enter the camps you would like access to" required />
                                                                     <label class="form-check-label" for="camp-name">
                                                                         west trail
                                                                     </label>
@@ -134,7 +154,7 @@
                                                         <div class="form-row p-3">
                                                             <div class="form-group col-3">
                                                                 <div class="form-check">
-                                                                    <input class="form-check-input form-element" type="checkbox" id="camp-name" name="camp-name" aria-label="Please enter the camps you would like access to" required />
+                                                                    <input class="form-check-input form-element" type="checkbox" id="name3" name="name3" aria-label="Please enter the camps you would like access to" required />
                                                                     <label class="form-check-label" for="camp-name">
                                                                         west trail
                                                                     </label>
@@ -151,8 +171,8 @@
                                                         <h3 class="card-title"><strong>Daycare Booking</strong></h3>
                                                         <div class="form-row p-3">
                                                             <div class="form-group col-sm-9">
-                                                                <label for="rental1">Kids</label>
-                                                                <input type="number" min=0 max=100 step="1" placeholder="Quantity of kids" class="form-control form-element" id="rental1" name="rental1" aria-label="Please enter how many children you may drop off" required />
+                                                                <label for="num_kids">Kids</label>
+                                                                <input type="number" min=0 max=100 step="1" placeholder="Quantity of kids" class="form-control form-element" id="num_kids" name="num_kids" aria-label="Please enter how many children you may drop off" required />
                                                                 <div class="invalid-feedback">
                                                                     Please enter a valid Quantity.
                                                                 </div>
@@ -160,7 +180,7 @@
                                                         </div>
                                                     </div>
                                                 </div>
-                                            <p>Price: <span id="service-price">$0.00</span></p>
+                                            <p>Price: <span id="service_price">$0.00</span></p>
                                         </fieldset>
                                         <div class="form-group col-md-6">
                                             <button type="submit" class="btn btn-primary">Next Step 

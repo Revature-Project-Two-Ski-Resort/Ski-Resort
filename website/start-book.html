@@ -15,7 +15,16 @@
     <!-- Custom CSS -->
     <link href="css/my_style.css" rel="stylesheet" type="text/css" />
     </head>
-    <body>
+    <body onload="
+        document.getElementById('prime_fname').value =sessionStorage.getItem('prime_fname');
+        document.getElementById('prime_mname').value = sessionStorage.getItem('prime_mname');
+        document.getElementById('prime_lname').value = sessionStorage.getItem('prime_lname');
+        document.getElementById('primaryemail').value = sessionStorage.getItem('primaryemail');
+        document.getElementById('primaryAge').value = sessionStorage.getItem('primaryAge');
+        document.getElementById('primarySkill').value = sessionStorage.getItem('primarySkill');
+        document.getElementById('person_price').innerHTML = formatter.format(group_book.users.totalprice());
+        nextpage='lodge-book.html';
+    ">
         <div class="content">
             <nav class="navbar fixed-top navbar-expand-sm navbar-dark text-light">
                 <a class="navbar-brand logo" href="home.html"><img class="img-fluid mx-auto d-block altsvgcolor"  src="images/Frosty-mountain-Logo-no-words.svg" alt="Frosty Mountain" />Frosty Mountain</a>
@@ -76,7 +85,29 @@
                                 <article>
                                     <h1><strong>Personal Information</strong></h1>
                                     <p class="text-muted blockquote">Please fill in your Personal Information and how many are part of your group</p>
-                                    <form id="myform" class="needs-validation" novalidate onchange="if(group_book.totalprice() && document.getElementById('person-price')){document.getElementById('person-price').innerHTML = formatter.format(group_book.users.totalprice());}nextpage='lodge-book.html';">
+                                    <form id="myform" class="needs-validation" novalidate onchange="
+                                        prime_fname = document.getElementById('prime_fname');
+                                        if(prime_fname.value) { setStorage('prime_fname', prime_fname.value); }
+
+                                        prime_mname = document.getElementById('prime_mname');
+                                        if(prime_mname.value) { setStorage('prime_mname', prime_mname.value); }
+
+                                        prime_lname = document.getElementById('prime_lname');
+                                        if(prime_lname.value) { setStorage('prime_lname', prime_lname.value); }
+
+                                        primaryemail = document.getElementById('primaryemail');
+                                        if(primaryemail.value) { setStorage('primaryemail', primaryemail.value); }
+
+                                        primaryAge = document.getElementById('primaryAge');
+                                        if(primaryAge.value) { setStorage('primaryAge', primaryAge.value); }
+
+                                        primarySkill = document.getElementById('primarySkill');
+                                        if(primarySkill.value) { setStorage('primarySkill', primarySkill.value); }
+
+                                        if(group_book.totalprice() && document.getElementById('person_price')){
+                                            document.getElementById('person_price').innerHTML = formatter.format(group_book.users.totalprice());
+                                        }
+                                        nextpage='lodge-book.html';">
                                         <fieldset>
                                             <legend>* Means Required</legend>
                                             <div class="form-row">
@@ -127,7 +158,7 @@
                                             </div>
                                             <div id="newpersonspace">
                                             </div>
-                                            <p>Price: <span id="person-price">$0.00</span></p>
+                                            <p>Price: <span id="person_price">$0.00</span></p>
                                         </fieldset>
                                         <div class="form-group col-sm-12">
                                             <button onclick="addpersonelement();" type="button" class="btn btn-success">

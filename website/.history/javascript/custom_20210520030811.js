@@ -354,7 +354,7 @@ function addpersonelement() {
             <div class="form-row">
                 <input type="number" oninput="addPerson(this.value, 'user${itemcounter}', 'lvl');" min=1 max=5 step="1" placeholder="5=expert" value=1 class="form-control col-md-7" id="primarySkill${itemcounter}" name="primarySkill${itemcounter}" aria-label="Please enter your skill level" />
                 <div class="col-md-5">
-                    <button onclick="removepersonelement('nextperson${itemcounter}', 'user${itemcounter}', 'person-price');" type="button" class="btn btn-danger">
+                    <button onclick="removepersonelement('nextperson${itemcounter}', 'user${itemcounter}', 'person_price');" type="button" class="btn btn-danger">
                         <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-backspace-fill" viewBox="0 0 16 16">
                             <path d="M15.683 3a2 2 0 0 0-2-2h-7.08a2 2 0 0 0-1.519.698L.241 7.35a1 1 0 0 0 0 1.302l4.843 5.65A2 2 0 0 0 6.603 15h7.08a2 2 0 0 0 2-2V3zM5.829 5.854a.5.5 0 1 1 .707-.708l2.147 2.147 2.146-2.147a.5.5 0 1 1 .707.708L9.39 8l2.146 2.146a.5.5 0 0 1-.707.708L8.683 8.707l-2.147 2.147a.5.5 0 0 1-.707-.708L7.976 8 5.829 5.854z"/>
                         </svg>
@@ -406,7 +406,7 @@ function addroomelement() {
                 <option>Mountain View Double Queen</option>
             </select>
             <div class="col-md-3">
-                <button onclick="removeroomelement('nextroom${itemcounter}', 'room${itemcounter}', 'lodge-price');" type="button" class="btn btn-danger">
+                <button onclick="removeroomelement('nextroom${itemcounter}', 'room${itemcounter}', 'lodge_price');" type="button" class="btn btn-danger">
                     <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-backspace-fill" viewBox="0 0 16 16">
                         <path d="M15.683 3a2 2 0 0 0-2-2h-7.08a2 2 0 0 0-1.519.698L.241 7.35a1 1 0 0 0 0 1.302l4.843 5.65A2 2 0 0 0 6.603 15h7.08a2 2 0 0 0 2-2V3zM5.829 5.854a.5.5 0 1 1 .707-.708l2.147 2.147 2.146-2.147a.5.5 0 1 1 .707.708L9.39 8l2.146 2.146a.5.5 0 0 1-.707.708L8.683 8.707l-2.147 2.147a.5.5 0 0 1-.707-.708L7.976 8 5.829 5.854z"/>
                     </svg>

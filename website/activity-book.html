@@ -15,7 +15,12 @@
     <!-- Custom CSS -->
     <link href="css/my_style.css" rel="stylesheet" type="text/css" />
     </head>
-    <body>
+    <body onload="
+        document.getElementById('lift_tickets').value = sessionStorage.getItem('lift_tickets');
+        document.getElementById('trail_name').value = sessionStorage.getItem('trail_name');
+        document.getElementById('activity-price').innerHTML = formatter.format(group_book.totalprice());
+        nextpage='activity-book.html';
+    ">
         <div class="content">
             <nav class="navbar fixed-top navbar-expand-sm navbar-dark text-light">
                 <a class="navbar-brand logo" href="home.html"><img class="img-fluid mx-auto d-block altsvgcolor"  src="images/Frosty-mountain-Logo-no-words.svg" alt="Frosty Mountain" />Frosty Mountain</a>
@@ -84,7 +89,18 @@
                                 <article>
                                     <h1><strong>Activities</strong></h1>
                                     <p class="text-muted blockquote">Please choose what activities you would like do</p>
-                                    <form id="myform" class="needs-validation" novalidate onchange="if(group_book.totalprice() && document.getElementById('activity-price')){document.getElementById('activity-price').innerHTML = formatter.format(group_book.totalprice());}nextpage='confirm-book.html';">
+                                    <form id="myform" class="needs-validation" novalidate onchange="
+                                        if(group_book.totalprice() && document.getElementById('activity-price')){
+                                            document.getElementById('activity-price').innerHTML = formatter.format(group_book.totalprice());
+                                        }
+                                        nextpage='confirm-book.html';
+
+                                        lift_tickets = document.getElementById('lift_tickets');
+                                        if(lift_tickets.value) { setStorage('lift_tickets', lift_tickets.value); }
+
+                                        trail_name = document.getElementById('trail_name');
+                                        if(trail_name.value) { setStorage('trail_name', trail_name.value); }
+                                    ">
                                         <fieldset>
                                             <legend>* Means Required</legend>
                                             <div class="card text-left">
@@ -92,8 +108,8 @@
                                                     <h6 class="card-title">Snow Season</h6>
                                                     <p class="text-muted">Snow tubing is free for all ages!</p>
                                                     <div class="form-group">
-                                                        <label for="lift-tickets">Lift Tickets</label>
-                                                        <input type="number" min=0 max=150 step="1" placeholder="# of tickets" class="form-control form-element" id="lift-tickets" name="lift-tickets" aria-label="Please enter how many lift tickets you want" />
+                                                        <label for="lift_tickets">Lift Tickets</label>
+                                                        <input type="number" min=0 max=150 step="1" placeholder="# of tickets" class="form-control form-element" id="lift_tickets" name="lift_tickets" aria-label="Please enter how many lift tickets you want" />
                                                         <div class="invalid-feedback">
                                                             Please enter a valid number of tickets.
                                                         </div>
@@ -107,8 +123,8 @@
                                                     <div class="form-group">
                                                         <h6 class="card-title">Hike/Bike Trail access</h6>
                                                         <div class="form-check">
-                                                            <input class="form-check-input form-element" type="checkbox" id="trail-name" name="trail-name" aria-label="Please enter the trails you would like access to" />
-                                                            <label class="form-check-label" for="trail-name">
+                                                            <input class="form-check-input form-element" type="checkbox" id="trail_name" name="trail_name" aria-label="Please enter the trails you would like access to" />
+                                                            <label class="form-check-label" for="trail_name">
                                                                 west trail
                                                             </label>
                                                             <div class="invalid-feedback">
