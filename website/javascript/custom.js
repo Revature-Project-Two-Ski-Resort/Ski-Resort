@@ -725,3 +725,28 @@ function valEmail(conEmail) {
         }
     });
 }
+
+//  --------- Manipulating sessionStorage -------------
+
+// Adding new value to storage
+function newStorage(key, val) {
+    if(sessionStorage.getItem(key) == undefined) {
+        sessionStorage.setItem(key, val);
+    }
+}
+
+// Changing a currently set value in storage
+function setStorage(key, val) {
+    if(sessionStorage.getItem(key) != undefined) {
+        sessionStorage.removeItem(key);
+        sessionStorage.setItem(key, val);
+    }
+    else {
+        newStorage(key, val);
+    }
+}
+
+// Removing all storage data after the form is submitted
+function wipeStorage() {
+    sessionStorage.clear();
+}
