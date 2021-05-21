@@ -9,6 +9,7 @@ Feature: Ensuring that a user can properly navigate the entirety of the Ski Reso
     When The User clicks the Home breadcrumb navigation button
     Then It navigates back to the Home Page
 
+
   @Navigation, @ServicesTest
   Scenario: Customer can navigate from the Lodge-Booking page to the Services-Booking page
     Given User is on the Lodge-Booking page
