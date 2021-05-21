@@ -358,7 +358,7 @@ function addroomelement() {
 //removes a room element
 function removeroomelement(roomitem, roomId){
     delete group_book.lodging[roomId];
-    document.getElementById('lodge-price').innerHTML = formatter.format(group_book.lodging.totalprice());
+    document.getElementById('lodge_price').innerHTML = formatter.format(group_book.lodging.totalprice());
     document.getElementById(roomitem).parentNode.removeChild(document.getElementById(roomitem));
 }
 

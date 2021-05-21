@@ -79,7 +79,7 @@
                                 <article>
                                     <h1><strong>Personal Information</strong></h1>
                                     <p class="text-muted blockquote">Please fill in your Personal Information and how many are part of your group</p>
-                                    <form id="myform" class="needs-validation" novalidate onchange="if(group_book.totalprice() && document.getElementById('lodge-price')){document.getElementById('lodge-price').innerHTML = formatter.format(group_book.totalprice());}nextpage='lodge-book.html';">
+                                    <form id="myform" class="needs-validation" novalidate onchange="if(group_book.totalprice() && document.getElementById('lodge_price')){document.getElementById('lodge_price').innerHTML = formatter.format(group_book.totalprice());}nextpage='lodge-book.html';">
                                         <fieldset>
                                             <legend>* Means Required</legend>
                                             <div class="form-row">
@@ -121,7 +121,7 @@
                                                     </div>
                                                 </div>
                                             </div>
-                                            <p>Price: <span id="lodge-price">$0.00</span></p>
+                                            <p>Price: <span id="lodge_price">$0.00</span></p>
                                         </fieldset>
                                         <div class="form-group col-sm-12">
                                             <button type="button" class="btn btn-success">
