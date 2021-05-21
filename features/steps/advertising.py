@@ -4,16 +4,20 @@ from selenium.webdriver.chrome.webdriver import WebDriver
 from selenium.webdriver.common.by import By
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
+from features.pages.home import Home
 
 
 @given(u'User is on the Home page')
-def step_impl(context):
-    raise NotImplementedError(u'STEP: Given User is on the Home page')
+def on_home(context):
+    driver: WebDriver = context.driver
+    driver.get('http://localhost:63342/Ski-Resort/website/home.html')
+    #raise NotImplementedError(u'STEP: Given User is on the Home page')
 
 
 @when(u'The User clicks on Services')
 def step_impl(context):
-    raise NotImplementedError(u'STEP: When The User clicks on Services')
+    driver: WebDriver = context.driver
+    
 
 
 @then(u'It navigates to the Services Page')

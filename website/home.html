@@ -9,7 +9,7 @@
     <!-- Favicon -->
     <link href="favicon.ico" rel="shortcut icon" />
 
-    <!-- Bootstrap CSS -->
+    <!-- Bootstrap CSS -->git status
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     
     <!-- Custom CSS -->
@@ -25,25 +25,25 @@
                 <div class="collapse navbar-collapse" id="collapsibleNavId">
                     <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
                         <li class="nav-item active">
-                            <a class="nav-link" href="home.html">Home</a>
+                            <a id="home" class="nav-link" href="home.html">Home</a>
                         </li>
                         <li class="nav-item dropdown open">
-                            <a class="nav-link dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" href="home.html">Lodging</a>
+                            <a id="lodging" class="nav-link dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" href="home.html">Lodging</a>
                             <div class="dropdown-menu green" aria-labelledby="triggerId">
-                                <a class="dropdown-item text-light" href="lodging.html#mtn-view">Mountain View</a>
-                                <a class="dropdown-item text-light" href="lodging.html#standard-view">Non-Mountain View</a>
+                                <a id="mountain" class="dropdown-item text-light" href="lodging.html#mtn-view">Mountain View</a>
+                                <a id="no_mountain" class="dropdown-item text-light" href="lodging.html#standard-view">Non-Mountain View</a>
                             </div>
                         </li>
                         <li class="nav-item dropdown open">
-                            <a class="nav-link dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" href="ski_services.html">Services</a>
+                            <a id="services" class="nav-link dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" href="ski_services.html">Services</a>
                             <div class="dropdown-menu green" aria-labelledby="triggerId">
-                                <a class="dropdown-item text-light" href="services.html">Spa</a>
-                                <a class="dropdown-item text-light" href="services.html">Rentals</a>
-                                <a class="dropdown-item text-light" href="services.html">Daycare</a>
+                                <a id="spa" class="dropdown-item text-light" href="services.html">Spa</a>
+                                <a id="rent" class="dropdown-item text-light" href="services.html">Rentals</a>
+                                <a id="daycare" class="dropdown-item text-light" href="services.html">Daycare</a>
                             </div>
                         </li>
                         <li class="nav-item dropdown open">
-                            <a class="nav-link dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" href="activities.html">Activities</a>
+                            <a id="activities" class="nav-link dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" href="activities.html">Activities</a>
                             <div class="dropdown-menu green" aria-labelledby="triggerId">
                                 <a class="dropdown-item text-light" href="activities.html">In-Season</a>
                                 <a class="dropdown-item text-light" href="off-season.html">Off-Season</a>
@@ -54,7 +54,7 @@
             </nav>
             <main>
                 <div class="bookbar">
-                    <button class="btn btn-primary" onclick="startbook('start-book.html');">Book A Trip Now</button>
+                    <button id="book" class="btn btn-primary" onclick="startbook('start-book.html');">Book A Trip Now</button>
                     <form class="form-inline my-0" autocomplete="off">
                         <div>
                             <input class="form-control mr-sm-2" type="text" placeholder="Search">
@@ -131,10 +131,10 @@
                         <h5>Lodging</h5>
                         <ul class="list-unstyled">
                             <li>
-                                <a href="lodging.html#mtn-view">Mountain View</a>
+                                <a id="mountain_bc" href="lodging.html#mtn-view">Mountain View</a>
                             </li>
                             <li>
-                                <a href="lodging.html#standard-view">Non-Mountain View</a>
+                                <a id="no_mountain_bc" href="lodging.html#standard-view">Non-Mountain View</a>
                             </li>
                         </ul>
                     </div>
@@ -142,13 +142,13 @@
                         <h5>Services</h5>
                         <ul class="list-unstyled">
                             <li>
-                                <a href="services.html">Spa</a>
+                                <a id="spa_bc" href="services.html">Spa</a>
                             </li>
                             <li>
-                                <a href="services.html">Rentals</a>
+                                <a id="rental_bc" href="services.html">Rentals</a>
                             </li>
                             <li>
-                                <a href="services.html">Daycare</a>
+                                <a id="daycare_bc" href="services.html">Daycare</a>
                             </li>
                         </ul>
                     </div>
@@ -156,10 +156,10 @@
                         <h5>Activities</h5>
                         <ul class="list-unstyled">
                             <li>
-                                <a href="activities.html">On-Season</a>
+                                <a id="onseason_bc" href="activities.html">On-Season</a>
                             </li>
                             <li>
-                                <a href="off-season.html">Off-Season</a>
+                                <a id="offseason_bc" href="off-season.html">Off-Season</a>
                             </li>
                         </ul>
                     </div>
