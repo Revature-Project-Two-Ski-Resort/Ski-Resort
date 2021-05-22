@@ -1,0 +1,304 @@
+<!doctype html>
+<html lang="en">
+    <head>
+    <title>Frosty Mountain Booking a trip! Step 1: Lodging</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Favicon -->
+    <link href="favicon.ico" rel="shortcut icon" />
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    
+    <!-- Custom CSS -->
+    <link href="css/my_style.css" rel="stylesheet" type="text/css" />
+    </head>
+    <body onload="populateExists();
+        document.getElementById('lift_tickets').value = sessionStorage.getItem('lift_tickets');
+        document.getElementById('trail_name').value = sessionStorage.getItem('trail_name');
+        document.getElementById('activity-price').innerHTML = formatter.format(group_book.totalprice());
+        nextpage='activity-book.html';
+    ">
+        <div class="content">
+            <nav class="navbar fixed-top navbar-expand-sm navbar-dark text-light">
+                <a class="navbar-brand logo" href="home.html"><img class="img-fluid mx-auto d-block altsvgcolor"  src="images/Frosty-mountain-Logo-no-words.svg" alt="Frosty Mountain" />Frosty Mountain</a>
+                <div class="spacer"></div>
+                <button class="navbar-toggler d-lg-none" type="button" data-toggle="collapse" data-target="#collapsibleNavId" aria-controls="collapsibleNavId"
+                    aria-expanded="false" aria-label="Toggle navigation"></button>
+                <div class="collapse navbar-collapse" id="collapsibleNavId">
+                    <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+                        <li class="nav-item">
+                            <a class="nav-link" href="home.html">Home</a>
+                        </li>
+                        <li class="nav-item dropdown open">
+                            <a class="nav-link dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" href="home.html">Lodging</a>
+                            <div class="dropdown-menu green" aria-labelledby="triggerId">
+                                <a class="dropdown-item text-light" href="lodging.html#mtn-view">Mountain View</a>
+                                <a class="dropdown-item text-light" href="lodging.html#standard-view">Non-Mountain View</a>
+                            </div>
+                        </li>
+                        <li class="nav-item dropdown open">
+                            <a class="nav-link dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" href="ski_services.html">Services</a>
+                            <div class="dropdown-menu green" aria-labelledby="triggerId">
+                                <a class="dropdown-item text-light" href="services.html">Spa</a>
+                                <a class="dropdown-item text-light" href="services.html">Rentals</a>
+                                <a class="dropdown-item text-light" href="services.html">Daycare</a>
+                            </div>
+                        </li>
+                        <li class="nav-item dropdown open">
+                            <a class="nav-link dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" href="activities.html">Activities</a>
+                            <div class="dropdown-menu green" aria-labelledby="triggerId">
+                                <a class="dropdown-item text-light" href="activities.html">In-Season</a>
+                                <a class="dropdown-item text-light" href="off-season.html">Off-Season</a>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+            <main>
+                <div class="bookbar">
+                    <div class="bread-crumb-container" aria-label="breadcrumb">
+                        <ol id="breadcrumb">
+                            <li><a aria-label="Home" href="home.html">Home</a></li>
+                            <li><a aria-label="Personal Information" href="start-book.html">Personal Information</a></li>
+                            <li><a aria-label="Lodging" href="lodge-book.html">Lodging</a></li>
+                            <li><a aria-label="Services" href="service-book.html">Services</a></li>
+                            <li class="breadcrumb-item" aria-current="Activities"><a class="active">Activities</a></li>
+                        </ol>
+                    </div>
+                    <form class="form-inline my-0" autocomplete="off">
+                        <div>
+                            <input class="form-control mr-sm-2" type="text" placeholder="Search">
+                        </div>
+                    </form>
+                </div>
+                <section>
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-5 py-3 px-0">
+                                <div class="card text-left">
+                                  <img class="card-img-top img-fluid mx-auto d-block" src="images/snowboard2.jpg" alt="Snowboard pic 2">
+                                  <div class="card-body">
+                                    <p class="card-text">Doing awesome stuff</p>
+                                  </div>
+                                </div>
+                            </div>
+                            <div class="col-7 py-3 px-4">
+                                <article>
+                                    <h1><strong>Activities</strong></h1>
+                                    <p class="text-muted blockquote">Please choose what activities you would like do</p>
+                                    <form id="myform" class="needs-validation" novalidate onchange="
+                                        if(group_book.totalprice() && document.getElementById('activity-price')){
+                                            document.getElementById('activity-price').innerHTML = formatter.format(group_book.totalprice());
+                                        }
+                                        nextpage='confirm-book.html';
+
+                                        lift_tickets = document.getElementById('lift_tickets');
+                                        if(lift_tickets.value) { setStorage('lift_tickets', lift_tickets.value); }
+
+                                        trail_name = document.getElementById('trail_name');
+                                        if(trail_name.value) { setStorage('trail_name', trail_name.value); }
+                                    ">
+                                        <fieldset>
+                                            <legend>* Means Required</legend>
+                                            <div class="card text-left">
+                                                <div class="card-body">
+                                                    <h6 class="card-title">Snow Season</h6>
+                                                    <p class="text-muted">Snow tubing is free for all ages!</p>
+                                                    <div class="form-group">
+                                                        <label for="lift_tickets">Lift Tickets</label>
+                                                        <input type="number" min=0 max=150 step="1" placeholder="# of tickets" class="form-control form-element" id="lift_tickets" name="lift_tickets" aria-label="Please enter how many lift tickets you want" />
+                                                        <div class="invalid-feedback">
+                                                            Please enter a valid number of tickets.
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <hr />
+                                            <div class="card text-left">
+                                                <div class="card-body">
+                                                    <h6>Off Season</h6>
+                                                    <div class="form-group">
+                                                        <h6 class="card-title">Hike/Bike Trail access</h6>
+                                                        <div class="form-check">
+                                                            <input value="west_trail" onchange="trailPick(this.value);" class="form-check-input form-element" type="checkbox" id="west_trail" name="west_trail" aria-label="Please enter the trails you would like access to" />
+                                                            <label class="form-check-label" for="west_trail">
+                                                                west trail
+                                                            </label>
+                                                            <div class="invalid-feedback">
+                                                                Please enter a valid trail.
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="form-group">
+                                                        <h6 class="card-title">Hike/Bike Trail access</h6>
+                                                        <div class="form-check">
+                                                            <input value="east_trail" onchange="trailPick(this.value);" class="form-check-input form-element" type="checkbox" id="east_trail" name="east_trail" aria-label="Please enter the trails you would like access to" />
+                                                            <label class="form-check-label" for="east_trail">
+                                                                west trail
+                                                            </label>
+                                                            <div class="invalid-feedback">
+                                                                Please enter a valid trail.
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="form-group">
+                                                        <h6 class="card-title">Hike/Bike Trail access</h6>
+                                                        <div class="form-check">
+                                                            <input value="bear_trail" onchange="trailPick(this.value);" class="form-check-input form-element" type="checkbox" id="bear_trail" name="bear_trail" aria-label="Please enter the trails you would like access to" />
+                                                            <label class="form-check-label" for="bear_trail">
+                                                                west trail
+                                                            </label>
+                                                            <div class="invalid-feedback">
+                                                                Please enter a valid trail.
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="form-group">
+                                                        <div class="form-check">
+                                                            <input value="eagle_trail" onchange="trailPick(this.value);" class="form-check-input form-element" type="checkbox" id="eagle_trail" name="eagle_trail" aria-label="Please enter the trails you would like access to" />
+                                                            <label class="form-check-label" for="eagle_trail">
+                                                                west trail
+                                                            </label>
+                                                            <div class="invalid-feedback">
+                                                                Please enter a valid trail.
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="form-group col-4">
+                                                        <div class="form-check">
+                                                            <input value="blue_trail" onchange="trailPick(this.value);" class="form-check-input form-element" type="checkbox" id="blue_trail" name="blue_trail" aria-label="Please enter the trails you would like access to" />
+                                                            <label class="form-check-label" for="blue_trail">
+                                                                west trail
+                                                            </label>
+                                                            <div class="invalid-feedback">
+                                                                Please enter a valid trail.
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="form-group col-4">
+                                                        <div class="form-check">
+                                                            <input value="yellow_trail" onchange="trailPick(this.value);" class="form-check-input form-element" type="checkbox" id="yellow_trail" name="yellow_trail" aria-label="Please enter the trails you would like access to" />
+                                                            <label class="form-check-label" for="yellow_trail">
+                                                                west trail
+                                                            </label>
+                                                            <div class="invalid-feedback">
+                                                                Please enter a valid trail.
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="form-group col-4">
+                                                        <div class="form-check">
+                                                            <input value="green_trail" onchange="trailPick(this.value);" class="form-check-input form-element" type="checkbox" id="green_trail" name="green_trail" aria-label="Please enter the trails you would like access to" />
+                                                            <label class="form-check-label" for="green_trail">
+                                                                west trail
+                                                            </label>
+                                                            <div class="invalid-feedback">
+                                                                Please enter a valid trail.
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="form-group">
+                                                        <h6 class="card-title">Camping Area access</h6>
+                                                        <div class="form-check">
+                                                            <input value="greentree" class="form-check-input form-element" onchange="offSeasonPick(this.value);" type="checkbox" id="camp-name" name="camp-name" aria-label="Please enter the camps you would like access to" />
+                                                            <label class="form-check-label" for="camp-name">
+                                                                Green Tree
+                                                            </label>
+                                                            <div class="invalid-feedback">
+                                                                Please enter a valid Camp-Site.
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        
+                                            
+                                            <p>Price: <span id="activity-price">$0.00</span></p>
+                                        </fieldset>
+                                        <div class="row">
+                                            <div class="form-group col-md-6">
+                                                <button type="submit" class="btn btn-primary">Next Step 
+                                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-right-circle" viewBox="0 0 16 16">
+                                                        <path fill-rule="evenodd" d="M1 8a7 7 0 1 0 14 0A7 7 0 0 0 1 8zm15 0A8 8 0 1 1 0 8a8 8 0 0 1 16 0zM4.5 7.5a.5.5 0 0 0 0 1h5.793l-2.147 2.146a.5.5 0 0 0 .708.708l3-3a.5.5 0 0 0 0-.708l-3-3a.5.5 0 1 0-.708.708L10.293 7.5H4.5z"/>
+                                                    </svg>
+                                                </button>
+                                            </div>
+                                        </div>
+                                    </form>
+                                </article>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </main>
+        </div>
+        <footer class="text-light">
+            <div class="container">
+                <div class="row">
+                    <div class="col-4">
+                        <h5>Home Page</h5>
+                        <ul class="list-unstyled">
+                            <li>
+                                <a href="home.html">Frosty Mountain</a>
+                            </li>
+                            <li>
+                                <a href="lodge-book.html">Book Now</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="col-2">
+                        <h5>Lodging</h5>
+                        <ul class="list-unstyled">
+                            <li>
+                                <a href="lodging.html#mtn-view">Mountain View</a>
+                            </li>
+                            <li>
+                                <a href="lodging.html#standard-view">Non-Mountain View</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="col-2">
+                        <h5>Services</h5>
+                        <ul class="list-unstyled">
+                            <li>
+                                <a href="services.html">Spa</a>
+                            </li>
+                            <li>
+                                <a href="services.html">Rentals</a>
+                            </li>
+                            <li>
+                                <a href="services.html">Daycare</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="col-2">
+                        <h5>Activities</h5>
+                        <ul class="list-unstyled">
+                            <li>
+                                <a href="activities.html">On-Season</a>
+                            </li>
+                            <li>
+                                <a href="off-season.html">Off-Season</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-xs-1-12">
+                        <p>&#169; LLC, Frosty Mountain</p>
+                    </div>
+                    
+                </div>
+            </div>
+        </footer>
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <script src="javascript/custom.js"></script>
+    </body>
+</html>

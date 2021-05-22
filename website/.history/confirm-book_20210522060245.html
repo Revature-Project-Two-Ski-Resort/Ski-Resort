@@ -1,0 +1,188 @@
+<!doctype html>
+<html lang="en">
+    <head>
+    <title>Frosty Mountain Booking a trip! Step 1: Lodging</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Favicon -->
+    <link href="favicon.ico" rel="shortcut icon" />
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    
+    <!-- Custom CSS -->
+    <link href="css/my_style.css" rel="stylesheet" type="text/css" />
+    </head>
+    <body onload="
+    populateExists();
+    if(group_book.totalprice && document.getElementById('final-price')){document.getElementById('final-price').innerHTML = group_book.totalprice();}reciptController(group_book);">
+        <div class="content">
+            <nav class="navbar fixed-top navbar-expand-sm navbar-dark text-light">
+                <a class="navbar-brand logo" href="home.html"><img class="img-fluid mx-auto d-block altsvgcolor"  src="images/Frosty-mountain-Logo-no-words.svg" alt="Frosty Mountain" />Frosty Mountain</a>
+                <div class="spacer"></div>
+                <button class="navbar-toggler d-lg-none" type="button" data-toggle="collapse" data-target="#collapsibleNavId" aria-controls="collapsibleNavId"
+                    aria-expanded="false" aria-label="Toggle navigation"></button>
+                <div class="collapse navbar-collapse" id="collapsibleNavId">
+                    <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+                        <li class="nav-item">
+                            <a class="nav-link" href="home.html">Home</a>
+                        </li>
+                        <li class="nav-item dropdown open">
+                            <a class="nav-link dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" href="home.html">Lodging</a>
+                            <div class="dropdown-menu green" aria-labelledby="triggerId">
+                                <a class="dropdown-item text-light" href="lodging.html#mtn-view">Mountain View</a>
+                                <a class="dropdown-item text-light" href="lodging.html#standard-view">Non-Mountain View</a>
+                            </div>
+                        </li>
+                        <li class="nav-item dropdown open">
+                            <a class="nav-link dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" href="ski_services.html">Services</a>
+                            <div class="dropdown-menu green" aria-labelledby="triggerId">
+                                <a class="dropdown-item text-light" href="services.html">Spa</a>
+                                <a class="dropdown-item text-light" href="services.html">Rentals</a>
+                                <a class="dropdown-item text-light" href="services.html">Daycare</a>
+                            </div>
+                        </li>
+                        <li class="nav-item dropdown open">
+                            <a class="nav-link dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" href="activities.html">Activities</a>
+                            <div class="dropdown-menu green" aria-labelledby="triggerId">
+                                <a class="dropdown-item text-light" href="activities.html">In-Season</a>
+                                <a class="dropdown-item text-light" href="off-season.html">Off-Season</a>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+            <main>
+                <div class="bookbar">
+                    <div class="bread-crumb-container" aria-label="breadcrumb">
+                        <ol id="breadcrumb">
+                            <li><a aria-label="Home" href="home.html">Home</a></li>
+                            <li><a aria-label="Personal Information" href="start-book.html">Personal Information</a></li>
+                            <li><a aria-label="Lodging" href="lodge-book.html">Lodging</a></li>
+                            <li><a aria-label="Services" href="service-book.html">Services</a></li>
+                            <li><a aria-label="Activities" href="activity-book.html">Activities</a></li>
+                            <li class="breadcrumb-item" aria-current="Confirmation"><a class="active">Confirm Booking</a></li>
+                        </ol>
+                    </div>
+                    <form class="form-inline my-0" autocomplete="off">
+                        <div>
+                            <input class="form-control mr-sm-2" type="text" placeholder="Search">
+                        </div>
+                    </form>
+                </div>
+                <section>
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-9 py-3 px-4">
+                                <article>
+                                    <h1><strong>Confirmation</strong></h1>
+                                    <p class="text-muted blockquote">Please Confirm the following information is correct</p>
+                                    
+                                    <div class="card">
+                                        <div class="card-body">
+                                            <div id="confirm-data" class="m-3">
+                                                <h4 class="card-title">Your Complete Order</h4>
+                                                <h5>Customer Information:</h5>
+                                                <div id="primaryuser" class="row m-3">
+                                                    <p class="col-4">First Name: Lamar</p>
+                                                    <p class="col-4">Middle Name: Lamar</p>
+                                                    <p class="col-4">Last Name: Lamar</p>
+                                                    <p class="col-4">Email: HIdjd</p>
+                                                    <p class="col-4">Age: HIdjd</p>
+                                                    <p class="col-4">Skill Level: HIdjd</p>
+                                                    <h6>Total Price: <span id="primaryuser-price">$0.00</span></h6>
+                                                </div>
+                                                <hr class="bg-dark" />
+                                            </div>
+                                            <h6>Total Price: <span id="final-price">$0.00</span></h6>
+                                            <button type="button" onclick="wipeStorage();" class="btn btn-danger">
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-bag-x" viewBox="0 0 16 16">
+                                                    <path fill-rule="evenodd" d="M6.146 8.146a.5.5 0 0 1 .708 0L8 9.293l1.146-1.147a.5.5 0 1 1 .708.708L8.707 10l1.147 1.146a.5.5 0 0 1-.708.708L8 10.707l-1.146 1.147a.5.5 0 0 1-.708-.708L7.293 10 6.146 8.854a.5.5 0 0 1 0-.708z"/>
+                                                    <path d="M8 1a2.5 2.5 0 0 1 2.5 2.5V4h-5v-.5A2.5 2.5 0 0 1 8 1zm3.5 3v-.5a3.5 3.5 0 1 0-7 0V4H1v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V4h-3.5zM2 5h12v9a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V5z"/>
+                                                    </svg>
+                                                    Cancel
+                                            </button>
+                                            <button type="button" class="btn btn-success">Complete Order 
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-bag-check" viewBox="0 0 16 16">
+                                                    <path fill-rule="evenodd" d="M10.854 8.146a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708 0l-1.5-1.5a.5.5 0 0 1 .708-.708L7.5 10.793l2.646-2.647a.5.5 0 0 1 .708 0z"/>
+                                                    <path d="M8 1a2.5 2.5 0 0 1 2.5 2.5V4h-5v-.5A2.5 2.5 0 0 1 8 1zm3.5 3v-.5a3.5 3.5 0 1 0-7 0V4H1v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V4h-3.5zM2 5h12v9a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V5z"/>
+                                                    </svg>
+                                            </button>
+                                        </div>
+                                    </div>
+                                </article>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </main>
+        </div>
+        <footer class="text-light">
+            <div class="container">
+                <div class="row">
+                    <div class="col-4">
+                        <h5>Home Page</h5>
+                        <ul class="list-unstyled">
+                            <li>
+                                <a href="home.html">Frosty Mountain</a>
+                            </li>
+                            <li>
+                                <a href="start-book.html">Book Now</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="col-2">
+                        <h5>Lodging</h5>
+                        <ul class="list-unstyled">
+                            <li>
+                                <a href="lodging.html#mtn-view">Mountain View</a>
+                            </li>
+                            <li>
+                                <a href="lodging.html#standard-view">Non-Mountain View</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="col-2">
+                        <h5>Services</h5>
+                        <ul class="list-unstyled">
+                            <li>
+                                <a href="services.html">Spa</a>
+                            </li>
+                            <li>
+                                <a href="services.html">Rentals</a>
+                            </li>
+                            <li>
+                                <a href="services.html">Daycare</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="col-2">
+                        <h5>Activities</h5>
+                        <ul class="list-unstyled">
+                            <li>
+                                <a href="activities.html">On-Season</a>
+                            </li>
+                            <li>
+                                <a href="off-season.html">Off-Season</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-xs-1-12">
+                        <p>&#169; LLC, Frosty Mountain</p>
+                    </div>
+                    
+                </div>
+            </div>
+        </footer>
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <script src="javascript/custom.js"></script>
+    </body>
+</html>
