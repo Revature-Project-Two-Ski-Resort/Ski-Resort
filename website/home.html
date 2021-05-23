@@ -9,7 +9,7 @@
     <!-- Favicon -->
     <link href="favicon.ico" rel="shortcut icon" />
 
-    <!-- Bootstrap CSS -->git status
+    <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     
     <!-- Custom CSS -->
@@ -35,7 +35,7 @@
                             </div>
                         </li>
                         <li class="nav-item dropdown open">
-                            <a id="services" class="nav-link dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" href="ski_services.html">Services</a>
+                            <a id="services" class="nav-link dropdown-toggle" id="test" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" href="ski_services.html">Services</a>
                             <div class="dropdown-menu green" aria-labelledby="triggerId">
                                 <a id="spa" class="dropdown-item text-light" href="services.html">Spa</a>
                                 <a id="rent" class="dropdown-item text-light" href="services.html">Rentals</a>
@@ -45,8 +45,8 @@
                         <li class="nav-item dropdown open">
                             <a id="activities" class="nav-link dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" href="activities.html">Activities</a>
                             <div class="dropdown-menu green" aria-labelledby="triggerId">
-                                <a class="dropdown-item text-light" href="activities.html">In-Season</a>
-                                <a class="dropdown-item text-light" href="off-season.html">Off-Season</a>
+                                <a id="in-season" class="dropdown-item text-light" href="activities.html">In-Season</a>
+                                <a id="off-season" class="dropdown-item text-light" href="off-season.html">Off-Season</a>
                             </div>
                         </li>
                     </ul>
@@ -84,7 +84,7 @@
                             <div class="col-4 py-3 px-0">
                                 <a class="iconimg" href="lodging.html">
                                     <div class="iconimg p-3">
-                                        <h1 class="text-center">Get That Lodging</h1>
+                                        <h1 id="lodging-image" class="text-center">Get That Lodging</h1>
                                         <p class="text-muted blockquote">Trust me, you'll need a place to stay</p><br />
                                         <img src="images/log-cabin2.svg" class="img-fluid mx-auto d-block" style="height: 200px;" alt="Mountain Img" />
                                     </div>
@@ -93,7 +93,7 @@
                             <div class="col-4 py-3 px-0">
                                 <a class="iconimg" href="services.html">
                                     <div class="iconimg p-3">
-                                        <h1 class="text-center">Spa</h1>
+                                        <h1 id="spa-image" class="text-center">Spa</h1>
                                         <p class="text-muted blockquote">Do you boo</p><br />
                                         <img src="images/couple-of-half-oranges.svg" class="img-fluid mx-auto d-block" style="height: 200px;" alt="Mountain Img" />
                                     </div>
@@ -102,7 +102,7 @@
                             <div class="col-4 py-3 px-0">
                                 <a class="iconimg" href="activities.html">
                                     <div class="iconimg p-3">
-                                        <h1 class="text-center">Skiing</h1>
+                                        <h1 id="activity-image" class="text-center">Skiing</h1>
                                         <p class="text-muted blockquote">Ski like a boss</p><br />
                                         <img src="images/ski-accessory.svg" class="img-fluid mx-auto d-block" style="height: 200px;" alt="Mountain Img" />
                                     </div>
@@ -120,10 +120,10 @@
                         <h5>Home Page</h5>
                         <ul class="list-unstyled">
                             <li>
-                                <a href="home.html">Frosty Mountain</a>
+                                <a id="home-bc" href="home.html">Frosty Mountain</a>
                             </li>
                             <li>
-                                <a href="start-book.html">Book Now</a>
+                                <a id="booking-bc" href="start-book.html">Book Now</a>
                             </li>
                         </ul>
                     </div>

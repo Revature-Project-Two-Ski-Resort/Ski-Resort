@@ -87,7 +87,7 @@
                                     <div class="col-12 py-3 px-4">
                                         <div class="tab-content" id="nav-tabContent">
                                             <div class="tab-pane fade show active rental-content" id="rental-content" role="tabpanel" aria-labelledby="rental-content">
-                                                <h1 class="text-center"><strong>Ski and Snowboard Rentals</strong></h1>
+                                                <h1 id="ski-rentals" class="text-center"><strong>Ski and Snowboard Rentals</strong></h1>
                                                 <p class="text-muted blockquote text-center">Rent what you need, forget what you don't</p>
                                                 <div class="card">
                                                     <div class="form-group row m-3">
@@ -103,7 +103,7 @@
                                                                         <option>X-Large</option>
                                                                     </select>
                                                                     <div class="input-group-append">
-                                                                        <button class="btn btn-primary" onclick="startbook('start-book.html');" type="button">Start Booking</button>
+                                                                        <button id="ski_booking" class="btn btn-primary" onclick="startbook('start-book.html');" type="button">Start Booking</button>
                                                                     </div>
                                                                 </div>
                                                             </div>
@@ -116,10 +116,10 @@
                                                 <hr />
                                                 <div class="form-group row m-3">
                                                     <div class="col-sm-7">
-                                                        <label class="col-sm-12 col-form-label" for="ski-size"><h3>Snowboards</h3></label>
+                                                        <label class="col-sm-12 col-form-label" for="sb-size"><h3>Snowboards</h3></label>
                                                         <div class="col-sm-12">
                                                             <div class="input-group">
-                                                                <select class="custom-select" id="ski-size" name="standard-bed" aria-label="Choose a standard suite">
+                                                                <select class="custom-select" id="sb-size" name="standard-bed" aria-label="Choose a standard suite">
                                                                     <option selected="selected">Choose a size</option>
                                                                     <option>Small</option>
                                                                     <option>Medium</option>
@@ -127,7 +127,7 @@
                                                                     <option>X-Large</option>
                                                                 </select>
                                                                 <div class="input-group-append">
-                                                                    <button class="btn btn-primary" onclick="startbook('start-book.html');" type="button">Start Booking</button>
+                                                                    <button isd="sb_booking" class="btn btn-primary" onclick="startbook('start-book.html');" type="button">Start Booking</button>
                                                                 </div>
                                                             </div>
                                                         </div>
@@ -143,7 +143,7 @@
                                                             <label class="col-sm-12 col-form-label" for="ski-size"><h3>Goggles</h3></label>
                                                             <div class="col-sm-12">
                                                                 <div class="input-group">
-                                                                    <select class="custom-select" id="ski-size" name="standard-bed" aria-label="Choose a style">
+                                                                    <select class="custom-select" id="goggles-style" name="standard-bed" aria-label="Choose a style">
                                                                         <option selected="selected">Choose a style</option>
                                                                         <option>blue</option>
                                                                         <option>black</option>
@@ -151,7 +151,7 @@
                                                                         <option>X-Large</option>
                                                                     </select>
                                                                     <div class="input-group-append">
-                                                                        <button class="btn btn-primary" onclick="startbook('start-book.html');" type="button">Start Booking</button>
+                                                                        <button id="goggles_booking" class="btn btn-primary" onclick="startbook('start-book.html');" type="button">Start Booking</button>
                                                                     </div>
                                                                 </div>
                                                             </div>
@@ -163,14 +163,14 @@
                                                 </div>
                                             </div>
                                             <div class="tab-pane fade spa-content" id="spa-content" role="tabpanel" aria-labelledby="spa-content">
-                                                <h1><strong>Full-Service Spa and Sauna</strong></h1>
+                                                <h1 id="full-service"><strong>Full-Service Spa and Sauna</strong></h1>
                                                 <p class="text-muted blockquote">Shhhhh I'm in the zone</p>
                                                 <div class="form-group row m-3">
                                                     <div class="col-sm-7">
                                                         <label class="col-sm-12 col-form-label" for="ski-size"><h3>Massages</h3></label>
                                                         <div class="col-sm-12">
                                                             <div class="input-group">
-                                                                <select class="custom-select" id="ski-size" name="standard-bed" aria-label="Choose a style">
+                                                                <select class="custom-select" id="massages" name="standard-bed" aria-label="Choose a style">
                                                                     <option selected="selected">Choose a style</option>
                                                                     <option>blue</option>
                                                                     <option>black</option>
@@ -178,7 +178,7 @@
                                                                     <option>X-Large</option>
                                                                 </select>
                                                                 <div class="input-group-append">
-                                                                    <button class="btn btn-primary" onclick="startbook('start-book.html');" type="button">Start Booking</button>
+                                                                    <button id="spa_booking" class="btn btn-primary" onclick="startbook('start-book.html');" type="button">Start Booking</button>
                                                                 </div>
                                                             </div>
                                                         </div>
@@ -189,14 +189,14 @@
                                                 </div>
                                             </div>
                                             <div class="tab-pane fade daycare-content multi-list" id="daycare-content" role="tabpanel" aria-labelledby="daycare-content">
-                                                <h1><strong>In-House Daycare</strong></h1>
+                                                <h1 id="house-daycare"><strong>In-House Daycare</strong></h1>
                                                 <p class="text-muted blockquote">Quick before they notice you're gone!</p>
                                                 <div class="form-group row m-3">
                                                     <div class="col-sm-7">
                                                         <label class="col-sm-12 col-form-label" for="ski-size"><h3>Childcare</h3></label>
                                                         <div class="col-sm-12">
                                                             <div class="input-group">
-                                                                <select class="custom-select" id="ski-size" name="standard-bed" aria-label="Choose a style">
+                                                                <select class="custom-select" id="child_num" name="standard-bed" aria-label="Choose a style">
                                                                     <option selected="selected">How many children</option>
                                                                     <option>1</option>
                                                                     <option>2</option>
@@ -204,7 +204,7 @@
                                                                     <option>4</option>
                                                                 </select>
                                                                 <div class="input-group-append">
-                                                                    <button class="btn btn-primary" onclick="startbook('start-book.html');" type="button">Start Booking</button>
+                                                                    <button id="daycare_booking" class="btn btn-primary" onclick="startbook('start-book.html');" type="button">Start Booking</button>
                                                                 </div>
                                                             </div>
                                                         </div>
@@ -252,13 +252,13 @@
                         <h5>Services</h5>
                         <ul class="list-unstyled">
                             <li>
-                                <a href="services.html">Spa</a>
+                                <a id="spa" href="services.html">Spa</a>
                             </li>
                             <li>
-                                <a href="services.html">Rentals</a>
+                                <a id="rentals" href="services.html">Rentals</a>
                             </li>
                             <li>
-                                <a href="services.html">Daycare</a>
+                                <a id="daycare" href="services.html">Daycare</a>
                             </li>
                         </ul>
                     </div>
