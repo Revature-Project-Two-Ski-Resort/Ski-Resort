@@ -77,23 +77,23 @@
                                 <article>
                                     <h1><strong>Lodging</strong></h1>
                                     <p class="text-muted blockquote">Please fill in the following form to set up your lodging</p>
-                                    <form id="myform" class="needs-validation" novalidate onchange="if(group_book.totalprice() && document.getElementById('lodge-price')){document.getElementById('lodge-price').innerHTML = formatter.format(group_book.lodging.totalprice());}nextpage='service-book.html';">
+                                    <form id="myform" class="needs-validation" novalidate onchange="if(group_book.totalprice && document.getElementById('lodge-price')){document.getElementById('lodge-price').innerHTML = formatter.format(group_book.lodging.totalprice());}nextpage='service-book.html';">
                                         <fieldset>
                                             <legend>* Means Required</legend>
                                             <div class="form-row">
                                                 <div class="form-group col-md-4">
                                                     <label for="start_date">Start Date</label>
-                                                    <input oninput="setDateRange('end_date', this.value, document.getElementById('end_date').value);group_book.startdate = new Date(getDateFormat(new Date(this.value), 0, 0, 0));" type="date" class="form-control" id="start_date" required />
+                                                    <input oninput="setDateRange('end_date', this.value, document.getElementById('end_date').value);group_book.startdate = new Date(getDateFormat(new Date(this.value), 0, 0, 0));" type="date" class="form-control form-element" id="start_date" required />
                                                 </div>
                                                 <div class="form-group col-md-4">
                                                     <label for="end_date">End Date</label>
-                                                    <input oninput="group_book.enddate = new Date(getDateFormat(new Date(this.value), 0, 0, 0));" type="date" class="form-control" id="end_date" required />
+                                                    <input oninput="group_book.enddate = new Date(getDateFormat(new Date(this.value), 0, 0, 0));" type="date" class="form-control form-element" id="end_date" required />
                                                 </div>
                                                 <!-- Need Date Pickers Here for start and end dates! -->    
                                             </div>
                                             <div class="form-group">
                                                 <label for="inputAddress">Rooms</label>
-                                                <select onchange="addLodge(this.value, 'room0')" class="custom-select" id="mtn-bed" name="mtn-bed" aria-label="Choose a suite" required>
+                                                <select onchange="addLodge(this.value, 'room0')" class="custom-select form-element" id="mtn-bed" name="mtn-bed" aria-label="Choose a suite" required>
                                                     <option selected="selected" value="">Choose a suite</option>
                                                     <option>King Suite</option>
                                                     <option>Single King</option>
