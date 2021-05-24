@@ -10,13 +10,13 @@ Feature: Ensuring that a user can properly navigate the entirety of the Ski Reso
     Then It navigates back to the Home Page
 
 
-## TODO: This navigation is broken, it leads to the rentals page instead
+### TODO: This navigation is broken, it leads to the rentals page instead
   @Navigation, @HomeTest
   Scenario: Customer can navigate from the Home page to the spa services page
     Given User is on the Home page
     When The User clicks Spa Services link
     Then It navigates to Spa Services
-
+##
   @Navigation, @HomeTest
   Scenario: Customer can navigate from the Home page to the rentals page
     Given User is on the Home page
@@ -43,7 +43,7 @@ Feature: Ensuring that a user can properly navigate the entirety of the Ski Reso
     When User clicks Lodging drop down link
     And User clicks Non-Mountain View
     Then It navigates to Non-Mountain View
-
+#
   @Navigation, @HomeTest
   Scenario: Customer can navigate from the Home page to the In-season activities
     Given User is on the Home page
@@ -63,7 +63,7 @@ Feature: Ensuring that a user can properly navigate the entirety of the Ski Reso
     Given User is on the Home page
     When User clicks home breadcrumb
     Then It navigates to the home page
-
+#
   @Navigation, @HomeTest
   Scenario: Customer can navigate to the booking page using booking page breadcrumb
     Given User is on the Home page
@@ -81,14 +81,14 @@ Feature: Ensuring that a user can properly navigate the entirety of the Ski Reso
     Given User is on the Home page
     When User clicks Non-Mountain View breadcrumb
     Then It navigates to Non-Mountain View
-
+#
   # TODO: This test currently fails due to the link leading to rentals page
   @Navigation, @HomeTest
   Scenario: Customer can navigate to the spa service page using the spa service breadcrumb
     Given User is on the Home page
     When User clicks Spa breadcrumb
     Then It navigates to Spa Services
-
+#
   @Navigation, @HomeTest
   Scenario: Customer can navigate to the rental service page using the rental service breadcrumb
     Given User is on the Home page
@@ -112,7 +112,7 @@ Feature: Ensuring that a user can properly navigate the entirety of the Ski Reso
     Given User is on the Home page
     When User clicks Off-season breadcrumb
     Then It navigates to Off-season activities
-
+#
   @Navigation, @HomeTest
   Scenario: Customer can navigate to the lodging page by clicking the lodging image
     Given User is on the Home page

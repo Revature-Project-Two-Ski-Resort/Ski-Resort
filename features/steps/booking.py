@@ -6,15 +6,22 @@ from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 from selenium.webdriver.support.select import Select
 
+from features.pages.activity_book import ActivityBook
 from features.pages.confirm_book import ConfirmBook
+from features.pages.home import Home
+from features.pages.lodging import Lodging
+from features.pages.service_book import ServiceBook
 from features.pages.start_book import StartBook
 from selenium.webdriver.chrome.webdriver import WebDriver
 from time import sleep
 
+
+
 @given(u'User is on the booking page')
 def on_booking(context):
     driver: WebDriver = context.driver
-    driver.get('file:///C:/Users/slopp/OneDrive/Documents/GitHub/Ski-Resort/website/start-book.html')
+    home_page: Home = context.home_page
+    driver.get(home_page.site_path + 'start-book.html')
     sleep(3)
 
 @when(u'User enters form details {first_name} {m_initial} {last_name} {email} {age} {skill_level}')
@@ -83,7 +90,8 @@ def user_add_group_member(context, first_name, m_initial, last_name, email, age,
 @given(u'User is on the lodging page')
 def user_on_lodging_page(context):
     driver: WebDriver = context.driver
-    driver.get('file:///C:/Users/slopp/OneDrive/Documents/GitHub/Ski-Resort/website/lodge-book.html')
+    home_page: Home = context.home_page
+    driver.get(home_page.site_path + 'lodge-book.html')
     sleep(3)
 
 @when(u'User selects room')
@@ -123,7 +131,8 @@ def user_removes_room(context):
 @given(u'User is on services page')
 def user_on_services_page(context):
     driver: WebDriver = context.driver
-    driver.get('file:///C:/Users/slopp/OneDrive/Documents/GitHub/Ski-Resort/website/service-book.html')
+    home_page: Home = context.home_page
+    driver.get(home_page.site_path + 'service-book.html')
     sleep(3)
 
 @when(u'User enters valid numbers')
@@ -131,6 +140,14 @@ def user_enter_valid_equipment_numbers(context):
     service_book_page: ServiceBook = context.service_book_page
     service_book_page.helmets().send_keys('5')
     service_book_page.skis().send_keys('10')
+    sleep(3)
+
+@when(u'User checks boxes')
+def user_checks_boxes(context):
+    service_book_page: ServiceBook = context.service_book_page
+    service_book_page.trail_box().click()
+    service_book_page.trail_box_two().click()
+    service_book_page.trail_box_three().click()
     sleep(3)
 
 @then(u'User should be on activities page')
@@ -152,7 +169,8 @@ def step_impl(context):
 @given(u'User is on activities page')
 def user_on_activities_page(context):
     driver: WebDriver = context.driver
-    driver.get('file:///C:/Users/slopp/OneDrive/Documents/GitHub/Ski-Resort/website/activity-book.html')
+    home_page: Home = context.home_page
+    driver.get(home_page.site_path + 'activity-book.html')
     sleep(3)
 
 @then(u'User should be on confirm booking page')
@@ -179,7 +197,8 @@ def user_enters_valid_activity(context):
 @given(u'User is on confirmation page')
 def user_on_confirmation_page(context):
     driver: WebDriver = context.driver
-    driver.get('file:///C:/Users/slopp/OneDrive/Documents/GitHub/Ski-Resort/website/confirm-book.html')
+    home_page: Home = context.home_page
+    driver.get(home_page.site_path + 'confirm-book.html')
     sleep(3)
 
 
@@ -211,3 +230,15 @@ def user_selects_ski_equipment(context):
 def user_clicks_add_equipment(context):
     confirm_book_page: ConfirmBook = context.confirm_book_page
     confirm_book_page.add_button().click()
+
+@when(u'User adds number of kids')
+def user_adds_num_of_kids(context):
+    service_book_page: ServiceBook = context.service_book_page
+    service_book_page.num_of_kids().send_keys(2)
+
+@when(u'User chooses trails')
+def user_checks_trails(context):
+    activity_book_page: ActivityBook = context.activity_book_page
+    activity_book_page.trail_box().click()
+    activity_book_page.trail_box_two().click()
+    sleep(3)

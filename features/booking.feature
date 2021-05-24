@@ -1,5 +1,5 @@
 Feature: Personal Info
-
+#
   Scenario Outline: User fills in personal information correctly
     Given User is on the booking page
     When User enters form details <first_name> <m_initial> <last_name> <email> <age> <skill_level>
@@ -58,7 +58,7 @@ Feature: Personal Info
     And User clicks on next step
     Then User should be on Lodge Book
 
-  #TODO: Get id for remove person button
+##  TODO: Get id for remove person button
   Scenario:  User removes a person
     Given User is on the booking page
     When User clicks on add a group member
@@ -95,12 +95,15 @@ Feature: Personal Info
     And User selects second room
     And User clicks remove room
     Then User should be on lodge book
-
+#
   Scenario: User adds rental equipment
     Given User is on services page
     When User enters valid numbers
+    And User adds number of kids
+    And User checks boxes
     And User clicks on next step
     Then User should be on activities page
+
 
 # TODO: This test case detected an error. It allows us to enter negative numbers
   Scenario:  User add invalid number of rental equipment
@@ -111,7 +114,7 @@ Feature: Personal Info
 
   Scenario: User adds on activity
     Given User is on activities page
-    When User inputs valid numbers for activities
+    When User chooses trails
     And User clicks on next step
     Then User should be on confirm booking page
 
@@ -123,32 +126,32 @@ Feature: Personal Info
     Then User should be on activities page
 
 
-  Scenario Outline: User confirms booking
-    Given User is on confirmation page
-    When User enter valid credentials <first_name> <m_initial> <last_name>
-    Examples:
-      | first_name | m_initial | last_name |
-      | John       | B         | Jackson   |
-      | Sally      | X         | Smith     |
-      | Ralph      | S         | Lauren    |
-    And User selects ski equipment
-    And User clicks on next step
-    Then User should be on confirm booking page
-
-  Scenario Outline: User inputs invalid confirmation information
-    Given User is on confirmation page
-    When User inputs invalid credentials "<first_name>" "<m_initial>" "<last_name>"
-    Examples:
-      | first_name | m_initial | last_name |
-      |            | B         | Jackson   |
-      | Sally      |           | Smith     |
-      | Ralph      | S         |           |
-    And User selects ski equipment
-    And User clicks on next step
-    Then User should be on confirm booking page
-
-    Scenario: User adds equipment at confirmation page
-      Given User is on confirmation page
-      When User selects ski equipment
-      And User clicks on add equipment
-      Then User should be on confirm booking page
+#  Scenario Outline: User confirms booking
+#    Given User is on confirmation page
+#    When User enter valid credentials <first_name> <m_initial> <last_name>
+#    Examples:
+#      | first_name | m_initial | last_name |
+#      | John       | B         | Jackson   |
+#      | Sally      | X         | Smith     |
+#      | Ralph      | S         | Lauren    |
+#    And User selects ski equipment
+#    And User clicks on next step
+#    Then User should be on confirm booking page
+#
+#  Scenario Outline: User inputs invalid confirmation information
+#    Given User is on confirmation page
+#    When User inputs invalid credentials "<first_name>" "<m_initial>" "<last_name>"
+#    Examples:
+#      | first_name | m_initial | last_name |
+#      |            | B         | Jackson   |
+#      | Sally      |           | Smith     |
+#      | Ralph      | S         |           |
+#    And User selects ski equipment
+#    And User clicks on next step
+#    Then User should be on confirm booking page
+#
+#    Scenario: User adds equipment at confirmation page
+#      Given User is on confirmation page
+#      When User selects ski equipment
+#      And User clicks on add equipment
+#      Then User should be on confirm booking page

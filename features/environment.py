@@ -12,6 +12,8 @@ from features.pages.services_rentals import ServicesRentals
 from features.pages.confirm_book import ConfirmBook
 from features.pages.activity_book import ActivityBook
 
+# Variable to the path of the website. Change this to your path.
+website_path = 'file:///C:/Users/slopp/OneDrive/Documents/GitHub/Ski-Resort/website/'
 
 def before_all(context):
     driver: WebDriver = webdriver.Chrome("chromedriver_win32/chromedriver.exe")
@@ -19,6 +21,7 @@ def before_all(context):
     home_page = Home(driver)
     context.driver = driver
     context.home_page = home_page
+    context.home_page.site_path = website_path
 
     booking_page = StartBook(driver)
     context.driver = driver

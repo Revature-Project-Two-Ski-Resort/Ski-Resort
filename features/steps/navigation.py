@@ -18,12 +18,14 @@ from time import sleep
 from features.pages.lodging import Lodging
 from features.pages.services_rentals import ServicesRentals
 from features.pages.services_spa import ServicesSpa
+from features.pages.start_book import StartBook
 
 
 @given(u'User is on the Home page')
 def on_home(context):
     driver: WebDriver = context.driver
-    driver.get('file:///C:/Users/slopp/OneDrive/Documents/GitHub/Ski-Resort/website/home.html')
+    home_page: Home = context.home_page
+    driver.get(home_page.site_path + 'home.html')
 
 @when(u'The User clicks the Book Now button')
 def step_impl(context):
@@ -67,7 +69,8 @@ def step_impl(context):
 @given(u'User is on the Lodge-Booking page')
 def step_impl(context):
     driver: WebDriver = context.driver
-    driver.get('file:///C:/Users/slopp/OneDrive/Documents/GitHub/Ski-Resort/website/lodging.html#mtn-view')
+    home_page: Home = context.home_page
+    driver.get(home_page.site_path + 'lodging.html#mtn-view')
 
 @when(u'User clicks Service Rental link')
 def step_impl(context):
@@ -142,7 +145,7 @@ def step_impl(context):
 def step_impl(context):
     driver: WebDriver = context.driver
     title = driver.find_element_by_id("in-season-title").text
-    assert title == 'Hike or Bike our beautiful trails'
+    assert title == 'Fun for the kids'
 
 @when(u'User clicks Off-Season')
 def step_impl(context):

@@ -5,6 +5,8 @@ class Home:
     def __init__(self, driver: WebDriver):
         self.driver = driver
 
+    global site_path
+
     def home_button(self):
         return self.driver.find_element_by_id('home')
 

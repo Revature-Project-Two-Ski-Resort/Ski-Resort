@@ -16,3 +16,12 @@ conn_cred.ini
 /tests/conn_cred.ini
 /db_conn/ski.log
 /db_conn/conn_cred.ini
+features/__pycache__/
+features/pages/__pycache__/
+venv/Lib/site-packages/Jinja2-3.0.1.dist-info/
+venv/Lib/site-packages/MarkupSafe-2.0.1.dist-info/
+venv/Lib/site-packages/Werkzeug-2.0.1.dist-info/
+venv/Lib/site-packages/click-8.0.1.dist-info/
+venv/Lib/site-packages/itsdangerous-2.0.1.dist-info/
+venv/Lib/site-packages/pip-21.1.1.dist-info/REQUESTED
+venv/Lib/site-packages/setuptools-56.0.0.dist-info/
