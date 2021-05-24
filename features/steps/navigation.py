@@ -167,7 +167,7 @@ def step_impl(context):
 def step_impl(context):
     driver: WebDriver = context.driver
     title = driver.find_element_by_id("in-season-title").text
-    assert title == 'Hike or Bike our beautiful trails'
+    assert title == 'Fun for the kids'
 
 @when(u'User clicks home breadcrumb')
 def step_impl(context):

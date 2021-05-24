@@ -1,6 +1,8 @@
 from selenium import webdriver
 from selenium.webdriver.chrome.webdriver import WebDriver
 from selenium.webdriver.chrome.options import Options
+
+from features.pages.lodge_book import LodgeBook
 from features.pages.service_book import ServiceBook
 from features.pages.activities import Activities
 from features.pages.lodging import Lodging
@@ -58,6 +60,10 @@ def before_all(context):
     service_book_page = ServiceBook(driver)
     context.driver = driver
     context.service_book_page = service_book_page
+
+    lodge_book_page = LodgeBook(driver)
+    context.driver = driver
+    context.lodge_book_page = lodge_book_page
     print("started")
 
 

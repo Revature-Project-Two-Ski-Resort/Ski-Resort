@@ -20,7 +20,7 @@ class Home:
         return self.driver.find_element_by_id('mountain')
 
     def no_mountain_button(self):
-        return self.driver.find_element_by_id('no_mountain')
+        return self.driver.find_element_by_id('no-mountain')
 
     def activities_button(self):
         return self.driver.find_element_by_id('activities')
@@ -38,10 +38,10 @@ class Home:
         return self.driver.find_element_by_id('book')
 
     def home_bc(self):
-        return self.driver.find_element_by_id('home-bc')
+        return self.driver.find_element_by_id('home_bc')
 
     def booking_bc(self):
-        return self.driver.find_element_by_id('booking-bc')
+        return self.driver.find_element_by_id('booking_bc')
 
     def mountain_bc(self):
         return self.driver.find_element_by_id('mountain_bc')

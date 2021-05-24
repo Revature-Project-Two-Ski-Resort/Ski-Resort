@@ -9,10 +9,13 @@ class Lodging:
         return self.driver.find_element_by_id('standard-bed')
 
     def mountain_view_drop(self):
-        return self.driver.find_element_by_id('mtn-bed')
+        return self.driver.find_element_by_id('mtn_bed')
 
     def mountain_booking_button(self):
         return self.driver.find_element_by_id('standard_booking')
 
     def no_mountain_booking_button(self):
         return self.driver.find_element_by_id('mountain_booking')
+
+    def additional_room_drop(self):
+        return self.driver.find_element_by_id("mtn-bed1")
