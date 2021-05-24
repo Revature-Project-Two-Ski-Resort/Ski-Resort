@@ -15,10 +15,9 @@ class GroupStringRepoImpl(GroupStringRepo):
             new_list.append(record.json())
         return new_list
 
-    def get_group_string(self, grp_str_id):
-        sql = "SELECT * FROM reservation.group_strings WHERE grp_str_id=%s"
-
-        rec = DbConn.make_connect(sql, [grp_str_id])[0]
+    def get_group_string(self, email):
+        sql = "SELECT * FROM reservation.group_strings WHERE email=%s"
+        rec = DbConn.make_connect(sql, [email])[0]
         new_str = GroupString(rec[0], rec[1], rec[2])
         return new_str
 
