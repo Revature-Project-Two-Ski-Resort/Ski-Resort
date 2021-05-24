@@ -43,7 +43,7 @@ class DbConn:
                 MyLog.info_log("You are connected to Postgre here are your results - ", name="make_connect")
                 MyLog.info_log(record, name="make_connect")
                 MyLog.info_log(tuition_app, name="make_connect")
-                return tuition_app
+                return record
 
         except (Exception, Error) as error:
             MyLog.error_log("Error while connecting to PostgreSQL", name="make_connect")

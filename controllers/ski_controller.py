@@ -1,5 +1,6 @@
 from psycopg2 import Error
 from flask import jsonify, request
+
 from cust_logging.my_logger import MyLog
 from services.ski_service import SkiService
 

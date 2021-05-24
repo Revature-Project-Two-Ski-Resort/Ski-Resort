@@ -192,7 +192,7 @@ function groupIDSubmit() {
     //set the caller_complete to the function that is supposed to receive the response
     let response_func = groupIDSubmit_complete;
     //endpoint: rest api endpoint
-    let endpoint = "/group"
+    let endpoint = "grpstr"
     //set the url by adding base_url + endpoint
     let url = base_url + endpoint;
     //request_type: type of request
@@ -205,7 +205,8 @@ function groupIDSubmit() {
     let load_loc = response_loc;
     //optional:json data to send to the server
     //can be left blank if not needed
-    let jsonData = group_book;
+    let jsonData = {'thisStr':JSON.stringify(group_book), 'email': group_book.users.primaryuser.email};
+    console.log(jsonData)
 
     ajaxCaller(request_type, url, response_func, response_loc, load_loc, jsonData)
 }
