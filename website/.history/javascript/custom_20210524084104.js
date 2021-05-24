@@ -224,7 +224,6 @@ function groupIDSubmit_complete(status, response, response_loc, load_loc) {
         console.log("the response status was: " + JSON.parse(response));
         document.getElementById(response_loc).innerHTML = "You have successfully booked your trip!";
         wipeStorage();
-        startbook('home.html');
     } else if(status == 400) {
         console.log("oops there was an issue with status code: " + status);
         //load the response into the response_loc
