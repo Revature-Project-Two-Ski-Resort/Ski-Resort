@@ -26,7 +26,7 @@ class DbConn:
                 MyLog.info_log("PostgreSQL server information", name="make_connect")
                 MyLog.info_log(connection.get_dsn_parameters(), name="make_connect")
                 # Executing a SQL query
-                cursor.execute("SELECT version();", name="make_connect")
+                cursor.execute("SELECT version();", "make_connect")
                 # Fetch result
                 record = cursor.fetchone()
                 MyLog.info_log("You are connected to - ", name="make_connect")
