@@ -140,8 +140,8 @@ from .wsgi import get_host
 
 if t.TYPE_CHECKING:
     import typing_extensions as te
-    from wsgiref.types import WSGIApplication
-    from wsgiref.types import WSGIEnvironment
+    from _typeshed.wsgi import WSGIApplication
+    from _typeshed.wsgi import WSGIEnvironment
     from .wrappers.response import Response
 
 _rule_re = re.compile(
@@ -338,7 +338,11 @@ class BuildError(RoutingException, LookupError):
         message.append(".")
         if self.suggested:
             if self.endpoint == self.suggested.endpoint:
-                if self.method and self.method not in self.suggested.methods:
+                if (
+                    self.method
+                    and self.suggested.methods is not None
+                    and self.method not in self.suggested.methods
+                ):
                     message.append(
                         " Did you mean to use methods"
                         f" {sorted(self.suggested.methods)!r}?"

@@ -23,8 +23,8 @@ from werkzeug.exceptions import BadRequest
 
 if t.TYPE_CHECKING:
     import typing_extensions as te
-    from wsgiref.types import WSGIApplication
-    from wsgiref.types import WSGIEnvironment
+    from _typeshed.wsgi import WSGIApplication
+    from _typeshed.wsgi import WSGIEnvironment
 
 
 class Request(_SansIORequest):
@@ -310,7 +310,7 @@ class Request(_SansIORequest):
         cached_data = getattr(self, "_cached_data", None)
         if cached_data is not None:
             return BytesIO(cached_data)
-        return self.stream  # type: ignore
+        return self.stream
 
     def close(self) -> None:
         """Closes associated resources of this request object.  This
@@ -445,7 +445,7 @@ class Request(_SansIORequest):
             and PUT requests.
         """
         self._load_form_data()
-        return self.form  # type: ignore
+        return self.form
 
     @cached_property
     def values(self) -> "CombinedMultiDict[str, str]":
@@ -497,7 +497,7 @@ class Request(_SansIORequest):
         more details about the used data structure.
         """
         self._load_form_data()
-        return self.files  # type: ignore
+        return self.files
 
     @property
     def script_root(self) -> str:
@@ -511,7 +511,7 @@ class Request(_SansIORequest):
         """Alias for :attr:`root_url`. The URL with scheme, host, and
         root path. For example, ``https://example.com/app/``.
         """
-        return self.root_url  # type: ignore
+        return self.root_url
 
     remote_user = environ_property[str](
         "REMOTE_USER",
