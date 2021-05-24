@@ -1,1 +1,1 @@
-{"resources":{"Scripts/Script.sql":{"sql-editor-data-source-id":"postgres-jdbc-1795e395307-cecfff2eab4eb27","default-datasource":"postgres-jdbc-1795e395307-cecfff2eab4eb27"}}}
+{"resources":{"Scripts/Ski-db.sql":{"sql-editor-data-source-id":"postgres-jdbc-1795e395307-cecfff2eab4eb27","default-datasource":"postgres-jdbc-1795e395307-cecfff2eab4eb27","default-catalog":"postgres","default-schema":"public"}}}

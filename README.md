@@ -7,6 +7,9 @@ The Ski Resort Application allows users to view offered services, make or cancel
 ## Technologies Used:
 
 * Python version 3.9
+* Bootstrap version 4.3.1
+* Popper version 1.14.7
+* JQuery version 3.3.1
 * Java version 8.0
 * JavaScript version ES6.0(ECMAScript 2018)
 * HTML version 5.0
