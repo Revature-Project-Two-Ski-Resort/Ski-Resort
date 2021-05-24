@@ -260,8 +260,7 @@ function getAllRooms_complete(status, response, response_loc, load_loc) {
         console.log("please parse json into dropdown");
         //Parse Json response into dropdown
         //load the response into the response_loc
-        console.log(JSON.parse(response));
-        document.getElementById(response_loc).innerHTML = "";
+        document.getElementById(response_loc).innerHTML = JSON.parse(response);
     } else if(status == 400) {
         console.log("oops there was an issue with status code: " + status);
         //load the response into the response_loc

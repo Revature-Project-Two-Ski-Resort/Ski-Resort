@@ -233,7 +233,7 @@ function getAllRooms() {
     //set the caller_complete to the function that is supposed to receive the response
     let response_func = getAllRooms_complete;
     //endpoint: rest api endpoint
-    let endpoint = "lodging"
+    let endpoint = "/lodging"
     //set the url by adding base_url + endpoint
     let url = java_base_url + endpoint;
     //request_type: type of request
@@ -258,10 +258,9 @@ function getAllRooms_complete(status, response, response_loc, load_loc) {
     if(status == 200) {
         console.log("the response status was: " + status);
         console.log("please parse json into dropdown");
-        //Parse Json response into dropdown
+        //Parse Json responce into dropdown
         //load the response into the response_loc
-        console.log(JSON.parse(response));
-        document.getElementById(response_loc).innerHTML = "";
+        document.getElementById(response_loc).innerHTML = response;
     } else if(status == 400) {
         console.log("oops there was an issue with status code: " + status);
         //load the response into the response_loc
@@ -274,7 +273,7 @@ function getAllService() {
     //set the caller_complete to the function that is supposed to receive the response
     let response_func = getAllService_complete;
     //endpoint: rest api endpoint
-    let endpoint = "services"
+    let endpoint = "/services"
     //set the url by adding base_url + endpoint
     let url = base_url + endpoint;
     //request_type: type of request
@@ -313,7 +312,7 @@ function getAllActivites() {
     //set the caller_complete to the function that is supposed to receive the response
     let response_func = getAllActivites_complete;
     //endpoint: rest api endpoint
-    let endpoint = "activities"
+    let endpoint = "/activities"
     //set the url by adding base_url + endpoint
     let url = base_url + endpoint;
     //request_type: type of request
