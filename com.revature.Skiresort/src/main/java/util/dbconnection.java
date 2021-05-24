@@ -8,10 +8,10 @@ import java.util.Properties;
 public class dbconnection {
     private static Connection conn = null;
 
-    public static Connection getConnnection() {
+    public static Connection getConnection() {
         if (conn == null) {
             try {
-                FileInputStream input = new FileInputStream(dbconnection.class.getClassLoader().getResource("connection.properties").getFile());
+                FileInputStream input = new FileInputStream("resources/connection.properties");
 
                 Properties props = new Properties();
                 props.load(input);
@@ -27,6 +27,16 @@ public class dbconnection {
 
         }
         return conn;
+    }
+    public static void main(String[] args) {
+
+        Connection conn1 = getConnection();
+        Connection conn2 = getConnection();
+        Connection conn3 = getConnection();
+        System.out.println(conn1);
+        System.out.println(conn2);
+        System.out.println(conn3);
+
     }
 }
 

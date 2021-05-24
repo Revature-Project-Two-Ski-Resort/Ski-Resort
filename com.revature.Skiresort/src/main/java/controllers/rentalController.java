@@ -20,6 +20,7 @@ public class rentalController {
     public Handler getRoomList = (context) -> {
         ArrayList<Rental> inv = rentalserv.getRooms();
         String invJson =gson.toJson(inv);
+         context.status(200);
         context.result(invJson);
 
     };
