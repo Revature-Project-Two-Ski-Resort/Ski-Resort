@@ -91,8 +91,6 @@ typeRental varchar,
 CONSTRAINT inventory_pk PRIMARY KEY (id)
 );
 
-
-
 INSERT INTO reservation.inventory
 (rentalname, price, typerental)
 VALUES('Mountain Queen Delux', 100.00, 'Room');
@@ -111,3 +109,5 @@ VALUES('NonMountain Queen Delux', 50.00, 'Room');
 INSERT INTO reservation.inventory
 (rentalname, price, typerental)
 VALUES('NonMountain Queen', 50.00, 'Room');
+
+select * from reservation.inventory;
