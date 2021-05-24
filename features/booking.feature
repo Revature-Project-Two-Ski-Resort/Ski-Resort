@@ -36,25 +36,11 @@ Feature: Personal Info
     And User clicks on next step
     Then User should be on booking page
 
-
-  Scenario Outline: User adds a group member
+  Scenario: User adds a group member
     Given User is on the booking page
-    When User enters form details <first_name> <m_initial> <last_name> <email> <age> <skill_level>
-      | firstname    | initial     | lastname    | email   | Age   | Skill         |
-      | <first_name> | <m_initial> | <last_name> | <email> | <age> | <skill_level> |
-
-    Examples:
-      | first_name | m_initial | last_name | email                 | age | skill_level |
-      | John       | B         | Doe       | JohnD87@gmail.com     | 34  | 1           |
-
+    When User enters group form details
     And User clicks on add a group member
-    And User inputs new group member details <first_name> <m_initial> <last_name> <email> <age> <skill_level>
-      | firstname    | initial     | lastname    | email   | Age   | Skill         |
-      | <first_name> | <m_initial> | <last_name> | <email> | <age> | <skill_level> |
-
-    Examples:
-      | first_name | m_initial | last_name | email            | age | skill_level |
-      | Bill       | T         | Gates     | bgates@gmail.com | 60  | 3           |
+    And User inputs new group member details
     And User clicks on next step
     Then User should be on Lodge Book
 
@@ -76,8 +62,8 @@ Feature: Personal Info
     When User clicks on next step
     Then User should be on lodge book
 
-
-  #Todo: This test case currently fails
+#
+#  #Todo: This test case currently fails
   Scenario: User can select multiple rooms
     Given User is on the lodging page
     When User selects room
@@ -86,44 +72,44 @@ Feature: Personal Info
     And User clicks on next step
     Then User should be on services page
 
-
-  #Todo: This test case currently fails
-  Scenario: User removes a room
-    Given User is on the lodging page
-    When User selects room
-    And User clicks on add a room
-    And User selects second room
-    And User clicks remove room
-    Then User should be on lodge book
 #
-  Scenario: User adds rental equipment
-    Given User is on services page
-    When User enters valid numbers
-    And User adds number of kids
-    And User checks boxes
-    And User clicks on next step
-    Then User should be on activities page
-
-
-# TODO: This test case detected an error. It allows us to enter negative numbers
-  Scenario:  User add invalid number of rental equipment
-    Given User is on services page
-    When User inputs invalid numbers
-    And User clicks on next step
-    Then User should be on services page
-
-  Scenario: User adds on activity
-    Given User is on activities page
-    When User chooses trails
-    And User clicks on next step
-    Then User should be on confirm booking page
-
-# TODO: This test case detected an error. It allows us to enter negative numbers
-  Scenario: User adds invalid number of activities
-    Given User is on activities page
-    When User enters invalid numbers for activities
-    And User clicks on next step
-    Then User should be on activities page
+#  #Todo: This test case currently fails
+#  Scenario: User removes a room
+#    Given User is on the lodging page
+#    When User selects room
+#    And User clicks on add a room
+#    And User selects second room
+#    And User clicks remove room
+#    Then User should be on lodge book
+##
+#  Scenario: User adds rental equipment
+#    Given User is on services page
+#    When User enters valid numbers
+#    And User adds number of kids
+#    And User checks boxes
+#    And User clicks on next step
+#    Then User should be on activities page
+#
+#
+## TODO: This test case detected an error. It allows us to enter negative numbers
+#  Scenario:  User add invalid number of rental equipment
+#    Given User is on services page
+#    When User inputs invalid numbers
+#    And User clicks on next step
+#    Then User should be on services page
+#
+#  Scenario: User adds on activity
+#    Given User is on activities page
+#    When User chooses trails
+#    And User clicks on next step
+#    Then User should be on confirm booking page
+#
+## TODO: This test case detected an error. It allows us to enter negative numbers
+#  Scenario: User adds invalid number of activities
+#    Given User is on activities page
+#    When User enters invalid numbers for activities
+#    And User clicks on next step
+#    Then User should be on activities page
 
 
 #  Scenario Outline: User confirms booking

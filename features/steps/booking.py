@@ -9,6 +9,7 @@ from selenium.webdriver.support.select import Select
 from features.pages.activity_book import ActivityBook
 from features.pages.confirm_book import ConfirmBook
 from features.pages.home import Home
+from features.pages.lodge_book import LodgeBook
 from features.pages.lodging import Lodging
 from features.pages.service_book import ServiceBook
 from features.pages.start_book import StartBook
@@ -30,20 +31,49 @@ def enter_info(context, first_name, m_initial, last_name, email, age, skill_leve
     booking_page.first_name_field().send_keys(first_name)
     booking_page.m_initial_field().send_keys(m_initial)
     booking_page.last_name_field().send_keys(last_name)
+    booking_page.email_field().clear()
     booking_page.email_field().send_keys(email)
+    booking_page.age_field().clear()
     booking_page.age_field().send_keys(age)
     booking_page.skill_field().clear()
     booking_page.skill_field().send_keys(skill_level)
     sleep(2)
 
+@when(u'User enters group form details')
+def step_impl(context):
+    booking_page: StartBook = context.booking_page
+    booking_page.first_name_field().send_keys("Booker")
+    booking_page.m_initial_field().send_keys("T")
+    booking_page.last_name_field().send_keys("Washington")
+    booking_page.email_field().clear()
+    booking_page.email_field().send_keys("test@gmail.com")
+    booking_page.age_field().clear()
+    booking_page.age_field().send_keys("45")
+    booking_page.skill_field().clear()
+    booking_page.skill_field().send_keys("5")
+    sleep(2)
+
+
+@when(u'User inputs new group member details')
+def step_impl(context):
+    booking_page: StartBook = context.booking_page
+    booking_page.group_first_name().send_keys("Bill")
+    booking_page.group_middle_initial().send_keys("R")
+    booking_page.group_last_name().send_keys("Gates")
+    booking_page.group_age().send_keys("64")
+    booking_page.group_skill().clear()
+    booking_page.group_skill().send_keys("1")
+    sleep(2)
+
+
 @then(u'User should be on Lodge Book')
 def on_lodge(context):
     driver: WebDriver = context.driver
     assert driver.title == 'Frosty Mountain Booking a trip! Step 2: Lodging'
-    sleep(3)
+    sleep(4)
 
 @then(u'User should be on booking page')
-def on_lodge(context):
+def on_booking(context):
     driver: WebDriver = context.driver
     assert driver.title == 'Frosty Mountain Booking a trip! Step 1: Personal Information'
     sleep(3)
@@ -59,6 +89,7 @@ def enter_wrong_info(context, first_name, m_initial, last_name, email, age, skil
     booking_page.first_name_field().send_keys(first_name.replace('"', ''))
     booking_page.m_initial_field().send_keys(m_initial)
     booking_page.last_name_field().send_keys(last_name.replace('"', ''))
+    booking_page.email_field().clear()
     booking_page.email_field().send_keys(email.replace('"', ''))
     booking_page.age_field().send_keys(age.replace('"', ''))
     booking_page.skill_field().clear()
@@ -76,8 +107,8 @@ def user_removes_person(context):
     #booking_page: StartBook = context.booking_page
     #booking_page.remove_person_button().click()
 
-@when(u'User inputs new group member details {first_name} {m_initial} {last_name} {email} {age} {skill_level}')
-def user_add_group_member(context, first_name, m_initial, last_name, email, age, skill_level):
+@when(u'User inputs new group member details {first_name} {m_initial} {last_name} {age} {skill_level}')
+def user_add_group_member(context, first_name, m_initial, last_name, age, skill_level):
     booking_page: StartBook = context.booking_page
     booking_page.group_first_name().send_keys(first_name)
     booking_page.group_middle_initial().send_keys(m_initial)
@@ -110,16 +141,17 @@ def user_on_services_page(context):
 
 @when(u'User clicks on add a room')
 def user_click_add_room(context):
-    lodging_page: Lodging = context.lodging_page
-    lodging_page.add_room_button().click()
+    lodge_book_page: LodgeBook = context.lodge_book_page
+    lodge_book_page.add_room_button().click()
     sleep(3)
 
 @when(u'User selects second room')
 def user_selects_second_room(context):
-    pass
     lodging_page: Lodging = context.lodging_page
-    lodging_page.standard_drop().click()
+    select = Select(lodging_page.additional_room_drop())
+    select.select_by_visible_text('Single King')
     sleep(3)
+
 
 @when(u'User clicks remove room')
 def user_removes_room(context):

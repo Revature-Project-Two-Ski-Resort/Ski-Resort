@@ -5,6 +5,11 @@ class Activity:
         self.trail_users = trail_users
         self.price = price
 
+    def __repr__(self):
+        return str(self.json())
+
+
+
     def json(self):
         return {
             'activityId': self.activity_id,
