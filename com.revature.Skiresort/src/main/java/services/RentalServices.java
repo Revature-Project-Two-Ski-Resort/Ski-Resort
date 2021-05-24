@@ -19,12 +19,12 @@ RentalDao rdao = new RentalDao();
     ;
     public ArrayList<Rental> getRooms() throws SQLException {
         ArrayList<Rental> rentals = rdao.getRooms();
-
+        System.out.println(rentals.toString());
         return rentals;
     }
 
     public void testConnection() throws SQLException {
-        try (Connection con = dbconnection.getConnnection()) {
+        try (Connection con = dbconnection.getConnection()) {
 
             System.out.println(con);
 
