@@ -15,4 +15,4 @@ conn_cred.ini
 /tests/ski.log
 /tests/conn_cred.ini
 /db_conn/ski.log
-/db_conn/conn_cred.ini
+/conn_cred.ini
