@@ -12,11 +12,11 @@ CREATE TABLE reservation.activities (
 	CONSTRAINT activities_pk PRIMARY KEY (activity_id)
 );
 
-DROP table if exists reservation.groupbook cascade;
+DROP table if exists reservation.group_books cascade;
 
-CREATE TABLE reservation.groupbook (
+CREATE TABLE reservation.group_books (
 	group_id bigserial NOT NULL,
-	item_id int8 NULL,
+	item_id varchar(255) NULL,
 	quantity int4 null,
 	CONSTRAINT groupbook_pk PRIMARY KEY (group_id)
 );
@@ -79,7 +79,7 @@ ALTER TABLE reservation.individualbook ADD CONSTRAINT individualbook_fk FOREIGN 
 	(individual_id) REFERENCES reservation.people(person_id);
 
 ALTER TABLE reservation.individualbook ADD CONSTRAINT individualbook_fk_group FOREIGN KEY 
-	(group_id) REFERENCES reservation.groupbook(group_id);
+	(group_id) REFERENCES reservation.group_books(group_id);
 
 drop table if exists reservation.inventory cascade;
 
@@ -93,21 +93,22 @@ CONSTRAINT inventory_pk PRIMARY KEY (id)
 
 INSERT INTO reservation.inventory
 (rentalname, price, typerental)
-VALUES('Mountain Queen Delux', 100.00, 'Room');
+VALUES('Mountain Queen Deluxe', 100.00, 'Room');
 INSERT INTO reservation.inventory
 (rentalname, price, typerental)
 VALUES('Mountain Queen', 100.00, 'Room');
 INSERT INTO reservation.inventory
 (rentalname, price, typerental)
-VALUES('Mountain King Suit Delux', 200.00, 'Room');
+VALUES('Mountain King Suit Deluxe', 200.00, 'Room');
 INSERT INTO reservation.inventory
 (rentalname, price, typerental)
 VALUES('Mountain King Suit', 200.00, 'Room');
 INSERT INTO reservation.inventory
 (rentalname, price, typerental)
-VALUES('NonMountain Queen Delux', 50.00, 'Room');
+VALUES('NonMountain Queen Deluxe', 50.00, 'Room');
 INSERT INTO reservation.inventory
 (rentalname, price, typerental)
 VALUES('NonMountain Queen', 50.00, 'Room');
 
 select * from reservation.inventory;
+select * from reservation.group_books;

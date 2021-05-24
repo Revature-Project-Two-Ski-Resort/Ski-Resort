@@ -33,10 +33,5 @@ class GroupBookRepoImpl(GroupBookRepo):
 
     def create_group_book(self, group_book):
         sql = "INSERT INTO reservation.group_books VALUES (DEFAULT, %s, %s) RETURNING *"
-
-        cursor = self.connection.cursor()
-        cursor.execute(sql, (group_book.item_id, group_book.quantity))
-
-        rec = cursor.fetchone()
-        new_book = GroupBook(rec[0], rec[1], rec[2])
+        new_book = DbConn.make_connect(sql, (group_book.item_id, group_book.quantity))
         return new_book

@@ -16,7 +16,6 @@ class GroupBook:
         group_book = GroupBook()
 
         group_book.group_id = json['groupId'] if 'groupId' in json else 0
-        group_book.item_id = json['itemId']
-        group_book.quantity = json['quantity']
+        group_book.item_id = json['email']
 
         return group_book
