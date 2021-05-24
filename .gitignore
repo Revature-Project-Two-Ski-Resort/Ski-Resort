@@ -16,4 +16,6 @@ conn_cred.ini
 /tests/conn_cred.ini
 /db_conn/ski.log
 /conn_cred.ini
+/db_conn/conn_cred.ini
 /com.revature.Skiresort/resources/
+

@@ -17,7 +17,6 @@ class GroupStringRepoImpl(GroupStringRepo):
 
     def get_group_string(self, email):
         sql = "SELECT * FROM reservation.group_strings WHERE email=%s"
-
         rec = DbConn.make_connect(sql, [email])[0]
         new_str = GroupString(rec[0], rec[1], rec[2])
         return new_str
