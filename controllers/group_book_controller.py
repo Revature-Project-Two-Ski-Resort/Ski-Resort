@@ -15,6 +15,7 @@ def route(app):
 
     @app.route("/group", methods=['POST'])
     def post_group():
+        print(request.json)
         group = GroupBook.parse_json(request.json)
         new_group = GroupBookService.create_group(group)
         return jsonify(new_group.json()), 201

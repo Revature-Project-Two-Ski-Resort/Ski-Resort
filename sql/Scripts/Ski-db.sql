@@ -93,19 +93,19 @@ CONSTRAINT inventory_pk PRIMARY KEY (id)
 
 INSERT INTO reservation.inventory
 (rentalname, price, typerental)
-VALUES('Mountain Queen Delux', 100.00, 'Room');
+VALUES('Mountain Queen Deluxe', 100.00, 'Room');
 INSERT INTO reservation.inventory
 (rentalname, price, typerental)
 VALUES('Mountain Queen', 100.00, 'Room');
 INSERT INTO reservation.inventory
 (rentalname, price, typerental)
-VALUES('Mountain King Suit Delux', 200.00, 'Room');
+VALUES('Mountain King Suit Deluxe', 200.00, 'Room');
 INSERT INTO reservation.inventory
 (rentalname, price, typerental)
 VALUES('Mountain King Suit', 200.00, 'Room');
 INSERT INTO reservation.inventory
 (rentalname, price, typerental)
-VALUES('NonMountain Queen Delux', 50.00, 'Room');
+VALUES('NonMountain Queen Deluxe', 50.00, 'Room');
 INSERT INTO reservation.inventory
 (rentalname, price, typerental)
 VALUES('NonMountain Queen', 50.00, 'Room');
