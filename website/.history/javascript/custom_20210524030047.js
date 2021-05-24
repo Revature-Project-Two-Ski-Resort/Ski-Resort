@@ -193,7 +193,7 @@ function groupIDSubmit() {
     //set the caller_complete to the function that is supposed to receive the response
     let response_func = groupIDSubmit_complete;
     //endpoint: rest api endpoint
-    let endpoint = "group"
+    let endpoint = "/group"
     //set the url by adding base_url + endpoint
     let url = base_url + endpoint;
     //request_type: type of request

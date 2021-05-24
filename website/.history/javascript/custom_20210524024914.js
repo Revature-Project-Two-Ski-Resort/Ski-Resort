@@ -185,7 +185,6 @@ console.log(myvalue);
 
 //This is the base url that we are using this base will always be applied it is global scope
 let base_url = "http://localhost:5000/";
-let java_base_url ="http://localhost:7001/";
 //caller function: calls an ajax request
 
 //This function will be called during the confirmation process
@@ -193,7 +192,7 @@ function groupIDSubmit() {
     //set the caller_complete to the function that is supposed to receive the response
     let response_func = groupIDSubmit_complete;
     //endpoint: rest api endpoint
-    let endpoint = "group"
+    let endpoint = "/group"
     //set the url by adding base_url + endpoint
     let url = base_url + endpoint;
     //request_type: type of request
@@ -235,7 +234,7 @@ function getAllRooms() {
     //endpoint: rest api endpoint
     let endpoint = "/lodging"
     //set the url by adding base_url + endpoint
-    let url = java_base_url + endpoint;
+    let url = base_url + endpoint;
     //request_type: type of request
     let request_type = "GET";
     //location you want the response to load
