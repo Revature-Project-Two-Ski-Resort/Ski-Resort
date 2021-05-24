@@ -11,11 +11,10 @@ def route(app):
 
     @app.route("/group/<group_id>", methods=['GET'])
     def get_group(group_id):
-        return jsonify(GroupBookService.get_group(group_id)), 200
+        return jsonify(GroupBookService.get_group_book(group_id)), 200
 
     @app.route("/group", methods=['POST'])
     def post_group():
-        print(request.json)
         group = GroupBook.parse_json(request.json)
-        new_group = GroupBookService.create_group(group)
-        return jsonify(new_group.json()), 201
+        new_group = GroupBookService.create_group_book(group)
+        return jsonify(new_group), 201
