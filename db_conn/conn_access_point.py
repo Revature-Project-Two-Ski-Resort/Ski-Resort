@@ -26,4 +26,4 @@ class DatabaseConn:
 
 
 if __name__ == "__main__":
-    DatabaseConn.load_conn("self")
+    DatabaseConn.load_conn("../conn_cred.ini")

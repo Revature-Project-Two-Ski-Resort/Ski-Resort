@@ -50,6 +50,8 @@
                             </div>
                         </li>
                     </ul>
+                    <span id="cartItems" class="navbar-text">
+                    </span>
                 </div>
             </nav>
             <main>
@@ -57,7 +59,7 @@
                     <button id="book" class="btn btn-primary" onclick="startbook('start-book.html');">Book A Trip Now</button>
                     <form class="form-inline my-0" autocomplete="off">
                         <div>
-                            <input class="form-control mr-sm-2" type="text" placeholder="Search">
+                            <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
                         </div>
                     </form>
                 </div>
@@ -67,21 +69,23 @@
                 <section>
                     <div class="container">
                         <div class="row">
-                            <div class="col-7 py-3 px-0">
+                            <div class="col-md-7 col-sm-12 py-3 px-0">
                                 <article>
                                     <h1><strong>Frosty Mountain Fun</strong></h1>
                                     <p class="text-muted blockquote">Nothing beats fun like sliding down a mountain</p>
-                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                                    <p>We are open 24/7 all year! We made making arrangements to come to our resort easy.</p>
+                                    <p>We have a simple flat rate of $20.00 a person/night. Now you can come over without breaking the bank.</p>
+                                    <button class="btn btn-primary" onclick="startbook('start-book.html');" type="button">Book A Trip Now! &rarr;</button>
                                 </article>
                             </div>
-                            <div class="col-5 py-3 px-0">
-                                <img src="images/mtn.svg" class="img-fluid mx-auto d-block" style="width: 50%;" alt="Mountain Img" />
+                            <div class="col-md-5 col-sm-12 py-3 px-0">
+                                <img src="images/mtn.svg" class="img-fluid mx-auto d-block" alt="Mountain Img" />
                             </div>
                         </div>
                         <hr />
                         <h2 class="h1 text-center"><strong>Trust me there is plenty to do</strong></h2>
                         <div class="row">
-                            <div class="col-4 py-3 px-0">
+                            <div class="col-md-4 col-sm-12 py-3 px-0">
                                 <a class="iconimg" href="lodging.html">
                                     <div class="iconimg p-3">
                                         <h1 class="text-center">Get That Lodging</h1>
@@ -90,7 +94,7 @@
                                     </div>
                                 </a>
                             </div>
-                            <div class="col-4 py-3 px-0">
+                            <div class="col-md-4 col-sm-12 py-3 px-0">
                                 <a class="iconimg" href="services.html">
                                     <div class="iconimg p-3">
                                         <h1 class="text-center">Spa</h1>
@@ -99,7 +103,7 @@
                                     </div>
                                 </a>
                             </div>
-                            <div class="col-4 py-3 px-0">
+                            <div class="col-md-4 col-sm-12 py-3 px-0">
                                 <a class="iconimg" href="activities.html">
                                     <div class="iconimg p-3">
                                         <h1 class="text-center">Skiing</h1>

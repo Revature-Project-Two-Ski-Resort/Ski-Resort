@@ -1,3 +1,5 @@
+CREATE SCHEMA reservation;
+
 -- DROP TABLE reservation.activities 
 
 CREATE TABLE reservation.activities (
@@ -11,7 +13,7 @@ CREATE TABLE reservation.activities (
 -- DROP TABLE reservation.groupbook 
 
 CREATE TABLE reservation.groupbook (
-	group_id bigserial NULL,
+	group_id bigserial NOT NULL,
 	item_id int8 NULL,
 	quantity int4 null,
 	CONSTRAINT groupbook_pk PRIMARY KEY (group_id)
@@ -20,7 +22,7 @@ CREATE TABLE reservation.groupbook (
 -- DROP TABLE reservation.individualbook 
 
 CREATE TABLE reservation.individualbook (
-	individual_id bigserial NULL,
+	individual_id bigserial NOT NULL,
 	activity_id int8 NULL,
 	quantity int4 null,
 	constraint individualbook_pk primary key (individual_id)
