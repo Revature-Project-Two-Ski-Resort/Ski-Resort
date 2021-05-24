@@ -25,9 +25,9 @@ from .tbtools import render_console_html
 from .tbtools import Traceback
 
 if t.TYPE_CHECKING:
-    from wsgiref.types import StartResponse
-    from wsgiref.types import WSGIApplication
-    from wsgiref.types import WSGIEnvironment
+    from _typeshed.wsgi import StartResponse
+    from _typeshed.wsgi import WSGIApplication
+    from _typeshed.wsgi import WSGIEnvironment
 
 # A week
 PIN_TIME = 60 * 60 * 24 * 7
@@ -477,7 +477,7 @@ class DebuggedApplication:
             cmd = request.args.get("cmd")
             arg = request.args.get("f")
             secret = request.args.get("s")
-            frame = self.frames.get(request.args.get("frm", type=int))
+            frame = self.frames.get(request.args.get("frm", type=int))  # type: ignore
             if cmd == "resource" and arg:
                 response = self.get_resource(request, arg)  # type: ignore
             elif cmd == "pinauth" and secret == self.secret:
