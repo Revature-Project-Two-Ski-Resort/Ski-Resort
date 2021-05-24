@@ -12,7 +12,13 @@ public class Rental {
         quantity = 0;
         type = "";
     }
-
+public Rental(int id,String n, int q,String t)
+{
+    this.id = id;
+    name = n;
+    quantity = q;
+    type = t;
+}
     public String getType() {
         return type;
     }

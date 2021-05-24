@@ -13,7 +13,7 @@ import java.util.ArrayList;
 public class RentalDao {
 
     public ArrayList<Rental> getRentals()  throws SQLException {
-        Connection dbc = dbconnection.getConnnection();
+        Connection dbc = dbconnection.getConnection();
         ArrayList<Rental> rentalList = new ArrayList<Rental>();
         String sql = "Select * from reservation.inventory";
 
@@ -27,7 +27,7 @@ public class RentalDao {
     }
 
     public ArrayList<Rental> getRooms()  throws SQLException {
-        Connection dbc = dbconnection.getConnnection();
+        Connection dbc = dbconnection.getConnection();
         ArrayList<Rental> rentalList = new ArrayList<Rental>();
         String sql = "Select * from reservation.inventory where typerental = 'Room';";
 

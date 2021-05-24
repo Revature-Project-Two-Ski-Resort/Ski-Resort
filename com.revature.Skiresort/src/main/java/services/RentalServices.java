@@ -24,7 +24,7 @@ RentalDao rdao = new RentalDao();
     }
 
     public void testConnection() throws SQLException {
-        try (Connection con = dbconnection.getConnnection()) {
+        try (Connection con = dbconnection.getConnection()) {
 
             System.out.println(con);
 

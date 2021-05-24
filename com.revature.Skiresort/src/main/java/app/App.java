@@ -19,7 +19,7 @@ public class App {
         //just need to add correct path based on url
         rentalController rc = new rentalController();
         app.get("",rc.getAllInventory);
-        app.get("",rc.getRoomList);
+        app.get("/lodge-book",rc.getRoomList);
     }
 
 }
