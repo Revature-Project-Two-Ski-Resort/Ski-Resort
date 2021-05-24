@@ -81,40 +81,33 @@ ALTER TABLE reservation.individualbook ADD CONSTRAINT individualbook_fk FOREIGN 
 ALTER TABLE reservation.individualbook ADD CONSTRAINT individualbook_fk_group FOREIGN KEY 
 	(group_id) REFERENCES reservation.groupbook(group_id);
 
+drop table if exists reservation.inventory cascade;
+
 CREATE TABLE reservation.inventory(
 id bigserial not null ,
 rentalName varchar,
-numcount int,
+price float,
 typeRental varchar,
 CONSTRAINT inventory_pk PRIMARY KEY (id)
 );
 
 
-INSERT INTO reservation.inventory
-(rentalname, numcount, typerental)
-VALUES('Skii', 10, 'Gear');
-INSERT INTO reservation.inventory
-(rentalname, numcount, typerental)
-VALUES('Skii', 10, 'Gear');
-INSERT INTO reservation.inventory
-(rentalname, numcount, typerental)
-VALUES('Mountain Queen', 1, 'Room');
-INSERT INTO reservation.inventory
-(rentalname, numcount, typerental)
-VALUES('Mountain Queen', 1, 'Room');
-INSERT INTO reservation.inventory
-(rentalname, numcount, typerental)
-VALUES('Mountain Queen', 1, 'Room');
-INSERT INTO reservation.inventory
-(rentalname, numcount, typerental)
-VALUES('Mountain King Suit', 1, 'Room');
-INSERT INTO reservation.inventory
-(rentalname, numcount, typerental)
-VALUES('Mountain King Suit', 1, 'Room');
-INSERT INTO reservation.inventory
-(rentalname, numcount, typerental)
-VALUES('NonMountain Queen', 1, 'Room');
-INSERT INTO reservation.inventory
-(rentalname, numcount, typerental)
-VALUES('NonMountain King', 1, 'Room');
 
+INSERT INTO reservation.inventory
+(rentalname, price, typerental)
+VALUES('Mountain Queen Delux', 100.00, 'Room');
+INSERT INTO reservation.inventory
+(rentalname, price, typerental)
+VALUES('Mountain Queen', 100.00, 'Room');
+INSERT INTO reservation.inventory
+(rentalname, price, typerental)
+VALUES('Mountain King Suit Delux', 200.00, 'Room');
+INSERT INTO reservation.inventory
+(rentalname, price, typerental)
+VALUES('Mountain King Suit', 200.00, 'Room');
+INSERT INTO reservation.inventory
+(rentalname, price, typerental)
+VALUES('NonMountain Queen Delux', 50.00, 'Room');
+INSERT INTO reservation.inventory
+(rentalname, price, typerental)
+VALUES('NonMountain Queen', 50.00, 'Room');
