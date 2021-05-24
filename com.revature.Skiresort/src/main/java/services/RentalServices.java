@@ -19,7 +19,7 @@ RentalDao rdao = new RentalDao();
     ;
     public ArrayList<Rental> getRooms() throws SQLException {
         ArrayList<Rental> rentals = rdao.getRooms();
-
+        System.out.println(rentals.toString());
         return rentals;
     }
 

@@ -28,6 +28,8 @@ public class RentalDao {
 
     public ArrayList<Rental> getRooms()  throws SQLException {
         Connection dbc = dbconnection.getConnection();
+        System.out.println(dbc.toString());
+
         ArrayList<Rental> rentalList = new ArrayList<Rental>();
         String sql = "Select * from reservation.inventory where typerental = 'Room';";
 
@@ -57,7 +59,7 @@ public class RentalDao {
         Rental r = new Rental();
         r.setId(rs.getInt("id"));
         r.setName(rs.getString("rentalName"));
-        r.setQuantity(rs.getInt("numcount"));
+        r.setQuantity(rs.getFloat("price"));
         r.setType(rs.getString("typerental"));
 
         return r;

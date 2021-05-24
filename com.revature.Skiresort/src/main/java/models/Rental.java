@@ -3,7 +3,7 @@ package models;
 public class Rental {
     private int id;
     private String name;
-    private int quantity;
+    private float quantity;
     private String type;
 
     public Rental(){
@@ -12,7 +12,7 @@ public class Rental {
         quantity = 0;
         type = "";
     }
-public Rental(int id,String n, int q,String t)
+public Rental(int id,String n, float q,String t)
 {
     this.id = id;
     name = n;
@@ -43,11 +43,17 @@ public Rental(int id,String n, int q,String t)
         this.name = name;
     }
 
-    public int getQuantity() {
+    public float getQuantity() {
         return quantity;
     }
 
-    public void setQuantity(int quantity) {
+    public void setQuantity(float quantity) {
         this.quantity = quantity;
+    }
+
+    @Override
+    public String toString() {
+        return   name +
+                "  " + quantity;
     }
 }
